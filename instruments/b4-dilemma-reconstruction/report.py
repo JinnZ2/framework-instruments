@@ -200,12 +200,36 @@ def main(items_path, reqs_path, grades_path, agree_path,
     print(f"Report written to {report_path}")
 
 
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def cli(argv):
+    if len(argv) != 8:
+        print("Usage: report.py <items> <reqs> <grades> <agreement> <shuffled_agreement> <calibration> <report.md>", file=sys.stderr)
+        return 1
+
+    def body():
+        try:
+            main(*argv[1:])
+        except SystemExit as exc:
+            return "void", {}, f"shuffled agreement run missing (exit {exc.code}); VOID report written"
+        return "ok", {}, ""
+    return runrecord.run("b4/report.py", argv[1:], None, list(argv[1:7]), argv[7], body)
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 8:
-        print(
-            "Usage: report.py <items> <reqs> <grades> <agreement> "
-            "<shuffled_agreement> <calibration> <report.md>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    main(*sys.argv[1:])
+    sys.exit(cli(sys.argv))

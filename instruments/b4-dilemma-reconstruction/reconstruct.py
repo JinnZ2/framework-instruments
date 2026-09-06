@@ -43,11 +43,34 @@ def emit_prompts(items_path, reconstructors_path, out_dir):
     print(f"Emitted {len(items) * len(recons)} prompt files to {out_dir}")
 
 
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 4:
+        print("Usage: reconstruct.py <items.jsonl> <reconstructors.jsonl> <out_dir>", file=sys.stderr)
+        return 1
+
+    def body():
+        emit_prompts(argv[1], argv[2], argv[3])
+        n = len([f for f in os.listdir(argv[3]) if f.endswith(".json")]) if os.path.isdir(argv[3]) else 0
+        return ("ok" if n else "empty"), {"prompt_files": n}, ""
+    return runrecord.run("b4/reconstruct.py", argv[1:], None, [argv[1], argv[2]], argv[3], body)
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print(
-            "Usage: reconstruct.py <items.jsonl> <reconstructors.jsonl> <out_dir>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    emit_prompts(sys.argv[1], sys.argv[2], sys.argv[3])
+    sys.exit(main(sys.argv))

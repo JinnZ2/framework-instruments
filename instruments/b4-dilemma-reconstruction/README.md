@@ -21,3 +21,13 @@ python3 report.py validated_items.jsonl validated_requirements.jsonl grades.json
 Items use either the `hypothetical` or `documented` arm, and mixed arms are refused. Reconstruction prompt files contain only `text_verbatim`. Requirements carry `item_id`, `reconstructor_id`, `req_id`, `requirement_text`, `status`, `settling_test`, and `layer`. The matcher remains external and its identity or method is recorded as `match_source`.
 
 The report preserves singleton requirements and presents real and shuffled agreement side by side. Calibration runs only on documented-arm items.
+
+## Run records
+
+Every command-line entry point appends one row to `runs.jsonl` (`ok`, `empty`,
+`void`, `error`) through the shared `instruments/runrecord.py`; the analysis
+functions themselves are unchanged. Two behaviours of the delivered logic are
+pinned rather than repaired in `instruments/test_status_paths.py`: an empty
+items file lands on an `error` row (`arms.pop()` on an empty set), and an
+empty requirements file lands on `void` (an empty status set is a subset of
+`{true, false}`).
