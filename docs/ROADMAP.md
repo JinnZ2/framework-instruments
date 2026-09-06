@@ -1,6 +1,6 @@
 # Conformance Roadmap
 
-The repository begins with four working prototype instrument families and five source specifications. Passing tests establish the behavior currently encoded; they do not by themselves establish full conformance with every line of the specifications.
+The repository begins with four working prototype code families, one documentation-only reproduction protocol, seven source specifications, and one source marker. Passing tests establish the behavior currently encoded; they do not by themselves establish full conformance with every line of the specifications.
 
 ## Priority work
 
@@ -17,7 +17,7 @@ The repository begins with four working prototype instrument families and five s
 
 ## Current prototype boundaries
 
-B1 implements offline schema checks, separation scoring, deterministic permutation, aggregation, and report generation. It expects model-produced base and forced-continuation files. B2 implements presentation conditions, ordering, a commit/release boundary, and auditor-agreement outputs. B3 implements role-separated prompt files, joining, and arm isolation. B4 implements item and requirement validation, independent reconstruction inputs, external match ingestion, agreement, a deterministic shuffle null, calibration, and reporting.
+B1 implements offline schema checks, separation scoring, deterministic permutation, aggregation, and report generation. It expects model-produced base and forced-continuation files. B2 implements presentation conditions, ordering, a commit/release boundary, and auditor-agreement outputs. B3 implements role-separated prompt files, joining, and arm isolation. B4 implements item and requirement validation, independent reconstruction inputs, external match ingestion, agreement, a deterministic shuffle null, calibration, and reporting. The Telemetry Vocabulary artifact is a Markdown-only, self-verifiable two-condition protocol with explicit output counts and falsification conditions.
 
 The initial code does not yet route every invocation through the shared run-record module. Some validators cover required fields without yet enforcing every field type. These are tracked as conformance work rather than hidden behind a stability label.
 

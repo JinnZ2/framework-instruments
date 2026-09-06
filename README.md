@@ -21,6 +21,7 @@ The repository treats an instrument as more than a prompt or argument. An instru
 | [`B2 — Audit Isolation`](instruments/b2-audit-isolation/) | Prototype, tested | Separates statement and key exposure across A/B/C/D audit conditions. |
 | [`B3 — Split Authorship`](instruments/b3-split-authorship/) | Prototype, tested | Separates case writing from key writing and preserves arm isolation. |
 | [`B4 — Dilemma Reconstruction`](instruments/b4-dilemma-reconstruction/) | Prototype, tested | Reconstructs requirement sets independently, computes agreement, runs a shuffle null, and calibrates documented items. |
+| [`Telemetry Vocabulary`](instruments/telemetry-vocabulary/) | Reproduction protocol | Names and tests a category error in which an exchange-condition request is replaced by ontological status or unsolicited reassurance. |
 | [`Frame-Location Benchmark`](docs/specifications/frame-location-benchmark.md) | Specification | Scores whether a mis-posed task and its faulty target are identified before answering. |
 | [`Post-Cutoff Gap Self-Scoring`](docs/specifications/post-cutoff-gap-self-scoring.md) | Specification | Uses staged commits and dated external records instead of an authored answer key. |
 | [`Cycle Ledger and Rate Gap`](docs/specifications/cycle-ledger-and-rate-gap.md) | Specification | Measures cycle rate-setters, unnotated work, relocation, and environment-to-record update rates. |
@@ -55,6 +56,7 @@ framework-instruments/
 │   ├── b2-audit-isolation/
 │   ├── b3-split-authorship/
 │   ├── b4-dilemma-reconstruction/
+│   ├── telemetry-vocabulary/
 │   └── runrecord.py
 ├── docs/
 │   ├── specifications/
@@ -84,3 +86,4 @@ The repository is dedicated to the public domain under **CC0 1.0 Universal**. No
 [4]: docs/specifications/post-cutoff-gap-self-scoring.md "Post-Cutoff Gap Self-Scoring"
 [5]: docs/specifications/cycle-ledger-and-rate-gap.md "Cycle Ledger and Data-Layer Envelope Instrument"
 [6]: docs/specifications/model-deprecation-backcast.md "Model Deprecation Backcast Instrument"
+[7]: docs/specifications/telemetry-vocabulary-artifact.md "Telemetry Vocabulary Artifact"
