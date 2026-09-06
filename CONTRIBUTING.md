@@ -14,7 +14,9 @@ Implemented offline instruments should use Python 3 and the standard library. Th
 
 Use JSON Lines for machine-readable records unless a specification requires another format. Reject malformed rows with the line number and field name. Do not coerce invalid values or silently supply defaults.
 
-Keep modules small. Prefer functions to classes and direct `sys.argv` parsing to CLI frameworks. A failure, void, or empty result should be recorded through the same run-record path as a successful result.
+Keep modules small. Prefer functions to classes and direct `sys.argv` parsing to CLI frameworks. Every entry point goes through `runrecord.run()`: the body returns `(status, counts, notes)` and an exception becomes an `error` row by that same path. A script that writes its own record, or none, does not conform.
+
+When a fix turns a test red, the red is the finding. Record it (the arena takes specimens) rather than adjusting the test. A guard implemented as a bare `assert` is not a guard.
 
 ## Tests
 

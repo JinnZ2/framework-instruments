@@ -104,18 +104,40 @@ def compute_agreement(reqs, matches):
     return results
 
 
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+import sys  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 4:
+        print("Usage: agree.py <requirements.jsonl> <matches.jsonl> <agreement.jsonl>", file=sys.stderr)
+        return 1
+
+    def body():
+        reqs = load_requirements(argv[1])
+        matches = load_matches(argv[2])
+        results = compute_agreement(reqs, matches)
+        with open(argv[3], "w", encoding="utf-8") as fh:
+            for res in results:
+                fh.write(json.dumps(res, ensure_ascii=False) + "\n")
+        return ("ok" if results else "empty"), {"rows": len(results)}, ""
+    return runrecord.run("b4/agree.py", argv[1:], None, [argv[1], argv[2]], argv[3], body)
+
+
 if __name__ == "__main__":
     import sys
-
-    if len(sys.argv) != 4:
-        print(
-            "Usage: agree.py <requirements.jsonl> <matches.jsonl> <agreement.jsonl>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    reqs = load_requirements(sys.argv[1])
-    matches = load_matches(sys.argv[2])
-    results = compute_agreement(reqs, matches)
-    with open(sys.argv[3], "w", encoding="utf-8") as fh:
-        for res in results:
-            fh.write(json.dumps(res, ensure_ascii=False) + "\n")
+    sys.exit(main(sys.argv))

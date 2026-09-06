@@ -1,43 +1,62 @@
 #!/usr/bin/env python3
-"""B3.3 arms.py — declare arms and refuse to mix them.
+"""B3.3 arms.py — declare the arms and refuse to mix them in one output file.
 
-Valid arms: single, split.
-Every row carries its arm. Refuses to write if mixed arms detected.
+  single   one instance writes statement and key together (baseline)
+  split    two instances, no shared context
+
+  b3_arms.py cases.jsonl arm cases_armed.jsonl
+
+Every output row carries its arm. A row with no arm is stamped with the
+declared one; a row already carrying a DIFFERENT arm makes the whole file a
+mix and nothing is written (status error, the offending line named). B2 then
+compares key coherence under condition B between arms — that comparison is
+B3's result, and it lives in B2, not here.
 """
 
-import json
+import os
 import sys
 
-VALID_ARMS = {"single", "split"}
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+ARMS = ("single", "split")
+CASE_FIELDS = ("case_id", "statement", "key_posed", "key_target", "key_why")
 
 
-def validate(in_path, out_path):
-    rows = []
-    with open(in_path, "r", encoding="utf-8") as fh:
-        for line in fh:
-            if not line.strip():
-                continue
-            row = json.loads(line)
-            if "arm" not in row:
-                raise ValueError(f"Missing arm in {row.get('case_id', '?')}")
-            if row["arm"] not in VALID_ARMS:
-                raise ValueError(f"Invalid arm {row['arm']!r}")
-            rows.append(row)
+def check_arm(arm):
+    if arm not in ARMS:
+        raise ValueError(f"arm must be one of {ARMS}, got {arm!r}")
 
-    arms = {r["arm"] for r in rows}
-    if len(arms) > 1:
-        print(f"ERROR: Mixed arms {arms}. Refusing to write.", file=sys.stderr)
-        sys.exit(1)
 
-    with open(out_path, "w", encoding="utf-8") as fh:
-        for row in rows:
-            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+def stamp(in_path, arm, out_path):
+    check_arm(arm)
+    rows, seen, stamped = [], set(), 0
+    for n, row in runrecord.read_jsonl(in_path, "cases.jsonl"):
+        for f in CASE_FIELDS:
+            if f not in row:
+                raise ValueError(f"cases.jsonl line {n}: missing field {f}")
+        extra = sorted(set(row) - set(CASE_FIELDS) - {"arm"})
+        if extra:
+            raise ValueError(f"cases.jsonl line {n}: unexpected field {extra[0]}")
+        if "arm" in row and row["arm"] != arm:
+            raise ValueError(f"cases.jsonl line {n}: arm {row['arm']!r} in a file declared {arm!r}; arms are not mixed in one file")
+        if row["case_id"] in seen:
+            raise ValueError(f"cases.jsonl line {n}: duplicate case_id {row['case_id']}")
+        seen.add(row["case_id"])
+        if "arm" not in row:
+            stamped += 1
+        rows.append(dict(row, arm=arm))
+    runrecord.write_jsonl(out_path, rows)
+    return ("ok" if rows else "empty"), {"rows": len(rows), "stamped": stamped}, f"arm={arm}"
 
-    print(f"Validated {len(rows)} cases, arm={arms.pop()}")
+
+def main(argv):
+    if len(argv) != 4:
+        print("usage: b3_arms.py cases.jsonl arm cases_armed.jsonl", file=sys.stderr)
+        return 1
+    return runrecord.run("b3_arms.py", argv[1:], None, [argv[1]], argv[3],
+                         lambda: stamp(argv[1], argv[2], argv[3]))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: arms.py <cases.jsonl> <validated_cases.jsonl>", file=sys.stderr)
-        sys.exit(1)
-    validate(sys.argv[1], sys.argv[2])
+    sys.exit(main(sys.argv))

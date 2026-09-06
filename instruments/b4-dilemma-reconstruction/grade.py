@@ -191,8 +191,33 @@ def grade(req_path, out_path):
     print(f"Graded {len(results)} items")
 
 
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 3:
         print("Usage: grade.py <requirements.jsonl> <grades.jsonl>", file=sys.stderr)
-        sys.exit(1)
-    grade(sys.argv[1], sys.argv[2])
+        return 1
+
+    def body():
+        grade(argv[1], argv[2])
+        return _status_by_rows(argv[2])
+    return runrecord.run("b4/grade.py", argv[1:], None, [argv[1]], argv[2], body)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

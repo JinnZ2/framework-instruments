@@ -1,130 +1,163 @@
 #!/usr/bin/env python3
-"""B1.5 report.py — assemble report.md from real and permuted summaries.
+"""B1.5 report.py — report.md from the real and permuted summaries.
 
-Required sections, in order, no others:
-1. Counts and the case set actually present.
-2. The D sweep table.
-3. The L sweep table.
-4. Stability overlaps.
-5. REAL vs PERMUTED, side by side, same table shape.
-6. NULLS TRIGGERED.
+Sections, in order, no others:
+  1. Counts and the case set actually present.
+  2. The D sweep table.
+  3. The L sweep table.
+  4. Stability overlaps.
+  5. REAL vs PERMUTED, side by side, same table shape.
+  6. NULLS TRIGGERED — the reference spec's N1..N5, each with its number.
 
-If permuted summary is missing, exits void.
+The permuted result is a SECOND OUTPUT, not a gate: neither result is ever
+suppressed. If the permuted summary is missing the report is not written and
+the run is recorded with status void.
+
+Every threshold below is a [CHOICE]: it is printed in section 6 beside the
+number it was compared against, so a reader can move it.
 """
 
-import json
 import os
 import sys
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
 
-def load_jsonl(path):
-    rows = []
-    with open(path, "r", encoding="utf-8") as fh:
-        for line in fh:
-            if line.strip():
-                rows.append(json.loads(line))
-    return rows
+N1_RESYNC_FLOOR = 0.9   # [CHOICE] N1 fires if resync_rate >= this at EVERY (D, L, model)
+N2_SEP_FLOOR = 1.0      # [CHOICE] N2 fires if sep_rate_high_ent >= this at D_max for every (L, model)
+N3_JACCARD_FLOOR = 0.5  # [CHOICE] N3 fires if any adjacent-D Jaccard < this
 
 
-def main(real_summary, perm_summary, nulls_path, report_path):
-    if not os.path.exists(perm_summary):
-        print("Permuted summary missing. Exiting void.", file=sys.stderr)
-        sys.exit(1)
+def split(rows):
+    return [r for r in rows if "jaccard" not in r], [r for r in rows if "jaccard" in r]
 
-    real = load_jsonl(real_summary)
-    perm = load_jsonl(perm_summary)
-    nulls = load_jsonl(nulls_path) if os.path.exists(nulls_path) else []
 
-    real_summaries = [r for r in real if r.get("type") == "summary"]
-    real_stability = [r for r in real if r.get("type") == "stability"]
-    perm_summaries = [r for r in perm if r.get("type") == "summary"]
-    perm_stability = [r for r in perm if r.get("type") == "stability"]
+def pooled(summaries, field, D=None, L=None):
+    grp = [s for s in summaries if (D is None or s["D"] == D) and (L is None or s["L"] == L)]
+    n = sum(s["count"] for s in grp)
+    return {
+        "count": n,
+        "mean_div_D": sum(s["mean_div_D"] * s["count"] for s in grp) / n if n else None,
+        "resync_rate": sum(s["resync_rate"] * s["count"] for s in grp) / n if n else None,
+        "top_decile_count": sum(s["top_decile_count"] for s in grp),
+    }
 
-    cases = sorted({
-        case_id
-        for row in real_summaries
-        for case_id in row.get("case_ids", [])
-    })
-    models = sorted({r["model_id"] for r in real_summaries})
-    D_vals = sorted({r["D"] for r in real_summaries})
-    L_vals = sorted({r["L"] for r in real_summaries})
 
-    # Null counts
-    null_counts = {}
-    for n in nulls:
-        null_counts[n["null_code"]] = null_counts.get(n["null_code"], 0) + 1
+def fmt(x):
+    return "--" if x is None else (f"{x:.4f}" if isinstance(x, float) else str(x))
 
-    with open(report_path, "w", encoding="utf-8") as fh:
-        fh.write("# B1 Runner-Up Trace Scoring Report\n\n")
 
-        # 1. Counts and case set
-        fh.write("## 1. Counts and Case Set\n\n")
-        fh.write(f"Cases: {len(cases)} — {', '.join(cases)}\n\n")
-        fh.write(f"Models: {len(models)} — {', '.join(models)}\n\n")
-        fh.write(f"Real separations: {len(real_summaries)} summary rows\n\n")
+def sweep_table(fh, summaries, axis, values):
+    fh.write(f"| {axis} | rows | mean div_D | resync rate | top-decile positions |\n|---|---|---|---|---|\n")
+    for v in values:
+        p = pooled(summaries, None, **{axis: v})
+        fh.write(f"| {v} | {p['count']} | {fmt(p['mean_div_D'])} | {fmt(p['resync_rate'])} | {p['top_decile_count']} |\n")
+    fh.write("\n")
 
-        # 2. D sweep table
-        fh.write("## 2. D Sweep Table\n\n")
-        fh.write("| D | Count | Mean div_D | Resync Rate | Top-Decile Count |\n")
-        fh.write("|---|-------|------------|-------------|------------------|\n")
-        for D in D_vals:
-            grp = [r for r in real_summaries if r["D"] == D]
-            cnt = sum(r["count"] for r in grp)
-            mean_div = sum(r["mean_div_D"] * r["count"] for r in grp) / cnt if cnt else 0
-            resync = sum(r["resync_rate"] * r["count"] for r in grp) / cnt if cnt else 0
-            top_dec = sum(r["top_decile_count"] for r in grp)
-            fh.write(f"| {D} | {cnt} | {mean_div:.4f} | {resync:.4f} | {top_dec} |\n")
+
+def stability_table(fh, real_st, perm_st=None):
+    head = "| model | fixed | pair | jaccard |" + (" permuted jaccard |" if perm_st is not None else "")
+    fh.write(head + "\n|---|---|---|---|" + ("---|" if perm_st is not None else "") + "\n")
+    perm_index = {}
+    for st in perm_st or []:
+        perm_index[(st["model_id"], st.get("L"), st.get("D"), tuple(st.get("D_pair") or st.get("L_pair")))] = st["jaccard"]
+    for st in real_st:
+        pair = st.get("D_pair") or st.get("L_pair")
+        fixed = f"L={st['L']}" if "D_pair" in st else f"D={st['D']}"
+        line = f"| {st['model_id']} | {fixed} | {'D' if 'D_pair' in st else 'L'} {pair} | {fmt(st['jaccard'])} |"
+        if perm_st is not None:
+            line += f" {fmt(perm_index.get((st['model_id'], st.get('L'), st.get('D'), tuple(pair))))} |"
+        fh.write(line + "\n")
+    fh.write("\n")
+
+
+def adjacent_d_jaccards(stability):
+    return [st["jaccard"] for st in stability if "D_pair" in st]
+
+
+def nulls(real_sum, real_st, perm_st):
+    """Return a list of (code, fired, number_text, description)."""
+    out = []
+    min_resync = min((s["resync_rate"] for s in real_sum), default=None)
+    out.append(("N1", min_resync is not None and min_resync >= N1_RESYNC_FLOOR,
+                f"min resync_rate over the sweep = {fmt(min_resync)} (fires at >= {N1_RESYNC_FLOOR})",
+                "separations land only on wording: high resync at all D"))
+    D_max = max((s["D"] for s in real_sum), default=None)
+    at_max = [s for s in real_sum if s["D"] == D_max]
+    min_sep_high = min((s["sep_rate_high_ent"] for s in at_max), default=None)
+    sep_all = pooled(at_max, None)["resync_rate"]
+    sep_all = None if sep_all is None else 1.0 - sep_all
+    out.append(("N2", min_sep_high is not None and min_sep_high >= N2_SEP_FLOOR,
+                f"min sep_rate_high_ent at D={D_max} = {fmt(min_sep_high)} against sep_rate_all = {fmt(sep_all)} (fires at >= {N2_SEP_FLOOR})",
+                "every high-entropy position separates: entropy alone is the measure"))
+    dj = adjacent_d_jaccards(real_st)
+    lj = [st["jaccard"] for st in real_st if "L_pair" in st]
+    out.append(("N3", bool(dj) and min(dj) < N3_JACCARD_FLOOR,
+                f"min adjacent-D Jaccard = {fmt(min(dj) if dj else None)}, min adjacent-L Jaccard = {fmt(min(lj) if lj else None)} (fires at D < {N3_JACCARD_FLOOR}); N sweep: NOT EVALUATED, selection is Stage B upstream of separations.jsonl",
+                "results depend on D or on N: instrument-dependence finding"))
+    pj = adjacent_d_jaccards(perm_st)
+    real_mean = sum(dj) / len(dj) if dj else None
+    perm_mean = sum(pj) / len(pj) if pj else None
+    out.append(("N4", real_mean is not None and perm_mean is not None and perm_mean >= real_mean,
+                f"mean adjacent-D Jaccard real = {fmt(real_mean)}, permuted = {fmt(perm_mean)} (fires if permuted >= real)",
+                "permuted run clusters as well as the real run: method artifact"))
+    out.append(("N5", None,
+                "NOT EVALUATED: entropy_basis lives in base.jsonl (counted in the b1_score.py run record); k sensitivity needs a second base pass at another k",
+                "top-k truncation changes the entropy ordering"))
+    return out
+
+
+def write_report(path, real_sum, real_st, perm_sum, perm_st):
+    cases = sorted({c for s in real_sum for c in s["case_ids"]})
+    models = sorted({s["model_id"] for s in real_sum})
+    D_vals = sorted({s["D"] for s in real_sum})
+    L_vals = sorted({s["L"] for s in real_sum})
+    base_rows = pooled(real_sum, None, D=D_vals[0], L=L_vals[0])["count"] if real_sum else 0
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write("# B1 runner-up trace — separation report\n\n## 1. Counts and case set\n\n")
+        fh.write(f"Cases present: {len(cases)} — {', '.join(cases) if cases else '(none)'}\n\n")
+        fh.write(f"Models present: {len(models)} — {', '.join(models) if models else '(none)'}\n\n")
+        fh.write(f"Separation rows per (D, L): {base_rows}. D swept over {D_vals}. L swept over {L_vals}.\n\n")
+        fh.write("No sampling frame is claimed; the case set is what was supplied.\n\n")
+        fh.write("## 2. D sweep\n\n")
+        sweep_table(fh, real_sum, "D", D_vals)
+        fh.write("## 3. L sweep\n\n")
+        sweep_table(fh, real_sum, "L", L_vals)
+        fh.write("## 4. Stability overlaps\n\nJaccard overlap of top-decile div_D position sets between adjacent sweep values.\n\n")
+        stability_table(fh, real_st)
+        fh.write("## 5. Real vs permuted\n\n| D | L | model | real mean div | perm mean div | real resync | perm resync | real top-decile | perm top-decile |\n|---|---|---|---|---|---|---|---|---|\n")
+        pindex = {(s["D"], s["L"], s["model_id"]): s for s in perm_sum}
+        for s in real_sum:
+            p = pindex.get((s["D"], s["L"], s["model_id"]), {})
+            fh.write(f"| {s['D']} | {s['L']} | {s['model_id']} | {fmt(s['mean_div_D'])} | {fmt(p.get('mean_div_D'))} | "
+                     f"{fmt(s['resync_rate'])} | {fmt(p.get('resync_rate'))} | {s['top_decile_count']} | {fmt(p.get('top_decile_count'))} |\n")
+        fh.write("\nStability, real beside permuted:\n\n")
+        stability_table(fh, real_st, perm_st)
+        fh.write("## 6. Nulls triggered\n\nReference spec N1–N5. Each line carries the number it was decided on; thresholds are declared choices.\n\n")
+        for code, fired, number, desc in nulls(real_sum, real_st, perm_st):
+            state = "NOT EVALUATED" if fired is None else ("FIRED" if fired else "not fired")
+            fh.write(f"- **{code}** {state} — {desc}. {number}\n")
         fh.write("\n")
 
-        # 3. L sweep table
-        fh.write("## 3. L Sweep Table\n\n")
-        fh.write("| L | Count | Mean div_D | Resync Rate | Top-Decile Count |\n")
-        fh.write("|---|-------|------------|-------------|------------------|\n")
-        for L in L_vals:
-            grp = [r for r in real_summaries if r["L"] == L]
-            cnt = sum(r["count"] for r in grp)
-            mean_div = sum(r["mean_div_D"] * r["count"] for r in grp) / cnt if cnt else 0
-            resync = sum(r["resync_rate"] * r["count"] for r in grp) / cnt if cnt else 0
-            top_dec = sum(r["top_decile_count"] for r in grp)
-            fh.write(f"| {L} | {cnt} | {mean_div:.4f} | {resync:.4f} | {top_dec} |\n")
-        fh.write("\n")
 
-        # 4. Stability overlaps
-        fh.write("## 4. Stability Overlaps\n\n")
-        fh.write("| Type | Model | Parameter Pair | Jaccard |\n")
-        fh.write("|------|-------|----------------|---------|\n")
-        for st in real_stability:
-            pair = st.get("D_pair") or st.get("L_pair")
-            fh.write(f"| {st['type']} | {st['model_id']} | {pair} | {st['jaccard']:.4f} |\n")
-        fh.write("\n")
+def report(real_path, perm_path, out_path):
+    if not os.path.isfile(perm_path):
+        return "void", {}, f"permuted summary missing: {os.path.basename(perm_path)}; report not written"
+    real_sum, real_st = split([r for _, r in runrecord.read_jsonl(real_path, "summary.jsonl")])
+    perm_sum, perm_st = split([r for _, r in runrecord.read_jsonl(perm_path, "summary_permuted.jsonl")])
+    write_report(out_path, real_sum, real_st, perm_sum, perm_st)
+    fired = [c for c, f, _, _ in nulls(real_sum, real_st, perm_st) if f]
+    counts = {"real_summary_rows": len(real_sum), "perm_summary_rows": len(perm_sum), "nulls_fired": len(fired)}
+    return ("ok" if real_sum else "empty"), counts, ("fired: " + ",".join(fired)) if fired else ""
 
-        # 5. REAL vs PERMUTED
-        fh.write("## 5. Real vs Permuted\n\n")
-        fh.write("| D | L | Model | Real Mean div | Perm Mean div | Real Resync | Perm Resync |\n")
-        fh.write("|---|---|-------|---------------|---------------|-------------|-------------|\n")
-        for key in sorted({(r["D"], r["L"], r["model_id"]) for r in real_summaries}):
-            D, L, model_id = key
-            real_row = next((r for r in real_summaries if (r["D"], r["L"], r["model_id"]) == key), {})
-            perm_row = next((r for r in perm_summaries if (r["D"], r["L"], r["model_id"]) == key), {})
-            fh.write(f"| {D} | {L} | {model_id} | "
-                     f"{real_row.get('mean_div_D', 0):.4f} | "
-                     f"{perm_row.get('mean_div_D', 0):.4f} | "
-                     f"{real_row.get('resync_rate', 0):.4f} | "
-                     f"{perm_row.get('resync_rate', 0):.4f} |\n")
-        fh.write("\n")
 
-        # 6. NULLS TRIGGERED
-        fh.write("## 6. Nulls Triggered\n\n")
-        for code in ["N1", "N2", "N3", "N4", "N5"]:
-            fh.write(f"- **{code}**: {null_counts.get(code, 0)}\n")
-        fh.write("\n")
-
-    print(f"Report written to {report_path}")
+def main(argv):
+    if len(argv) != 4:
+        print("usage: b1_report.py summary.jsonl summary_permuted.jsonl report.md", file=sys.stderr)
+        return 1
+    return runrecord.run("b1_report.py", argv[1:], None, [argv[1], argv[2]], argv[3],
+                         lambda: report(argv[1], argv[2], argv[3]))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: report.py <real_summary> <perm_summary> <nulls.jsonl> <report.md>",
-              file=sys.stderr)
-        sys.exit(1)
-    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    sys.exit(main(sys.argv))

@@ -62,11 +62,34 @@ def shuffle(req_path, seed, out_path):
     print(f"Shuffled {len(rows)} rows across {len(item_ids)} items (seed={seed})")
 
 
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 4:
+        print("Usage: nullshuffle.py <requirements.jsonl> <seed> <requirements_shuffled.jsonl>", file=sys.stderr)
+        return 1
+    seed = int(argv[2])
+
+    def body():
+        shuffle(argv[1], seed, argv[3])
+        return _status_by_rows(argv[3])
+    return runrecord.run("b4/nullshuffle.py", argv[1:], seed, [argv[1]], argv[3], body)
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print(
-            "Usage: nullshuffle.py <requirements.jsonl> <seed> <requirements_shuffled.jsonl>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    shuffle(sys.argv[1], int(sys.argv[2]), sys.argv[3])
+    sys.exit(main(sys.argv))

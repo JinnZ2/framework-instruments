@@ -48,8 +48,36 @@ def validate(inpath, outpath):
     print(f"Validated {len(rows)} items, arm={arms.pop()}")
 
 
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 3:
         print("Usage: items.py <items.jsonl> <validated_items.jsonl>", file=sys.stderr)
-        sys.exit(1)
-    validate(sys.argv[1], sys.argv[2])
+        return 1
+
+    def body():
+        try:
+            validate(argv[1], argv[2])
+        except SystemExit as exc:
+            return "void", {}, f"refused (exit {exc.code}): mixed arms, nothing written"
+        return _status_by_rows(argv[2])
+    return runrecord.run("b4/items.py", argv[1:], None, [argv[1]], argv[2], body)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

@@ -89,11 +89,33 @@ def calibrate(req_path, factors_path, items_path, out_path):
     print(f"Calibrated {len(results)} documented items")
 
 
+# ---- run-record wiring (added; logic above is unchanged) --------------------
+import os  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import runrecord  # noqa: E402
+
+
+def _rows(path):
+    try:
+        return sum(1 for _ in runrecord.read_jsonl(path))
+    except (OSError, ValueError):
+        return None
+
+
+def _status_by_rows(path):
+    n = _rows(path)
+    return ("ok" if n else "empty"), {"rows": n}, ""
+
+def main(argv):
+    if len(argv) != 5:
+        print("Usage: calibrate.py <reqs> <factors> <items> <out>", file=sys.stderr)
+        return 1
+
+    def body():
+        calibrate(argv[1], argv[2], argv[3], argv[4])
+        return _status_by_rows(argv[4])
+    return runrecord.run("b4/calibrate.py", argv[1:], None, [argv[1], argv[2], argv[3]], argv[4], body)
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print(
-            "Usage: calibrate.py <reqs> <factors> <items> <out>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-    calibrate(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    sys.exit(main(sys.argv))

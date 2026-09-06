@@ -21,6 +21,8 @@ The repository treats an instrument as more than a prompt or argument. An instru
 | [`B2 — Audit Isolation`](instruments/b2-audit-isolation/) | Prototype, tested | Separates statement and key exposure across A/B/C/D audit conditions. |
 | [`B3 — Split Authorship`](instruments/b3-split-authorship/) | Prototype, tested | Separates case writing from key writing and preserves arm isolation. |
 | [`B4 — Dilemma Reconstruction`](instruments/b4-dilemma-reconstruction/) | Prototype, tested | Reconstructs requirement sets independently, computes agreement, runs a shuffle null, and calibrates documented items. |
+| [`Arena`](arena/) | Instrument, tested | Defects that pass every normal signal as specimens: five-state grading, `path_probe.py` (which branch produced a green), a six-section report. |
+| [`Run record`](instruments/runrecord.py) | Shared | Every script's every run, failures included, as one row in `runs.jsonl`; `coverage_pairs.py` counts the `(script, status)` pairs the tests reach. |
 | [`Telemetry Vocabulary`](instruments/telemetry-vocabulary/) | Reproduction protocol | Names and tests a category error in which an exchange-condition request is replaced by ontological status or unsolicited reassurance. |
 | [`Frame-Location Benchmark`](docs/specifications/frame-location-benchmark.md) | Specification | Scores whether a mis-posed task and its faulty target are identified before answering. |
 | [`Post-Cutoff Gap Self-Scoring`](docs/specifications/post-cutoff-gap-self-scoring.md) | Specification | Uses staged commits and dated external records instead of an authored answer key. |
@@ -28,7 +30,7 @@ The repository treats an instrument as more than a prompt or argument. An instru
 | [`Model Deprecation Backcast`](docs/specifications/model-deprecation-backcast.md) | Specification | Reads model retirements backward against measured deltas, discard sets, register shifts, and discourse cycles. |
 | [`Routing Data-Layer Marker`](docs/specifications/routing-data-layer-marker.md) | Source marker | Defines the envelope and refutation conditions behind the cycle-ledger specification. |
 
-The implementations are an initial code drop. Their included tests pass, but the [conformance roadmap](docs/ROADMAP.md) identifies work still required before the full ordered-queue specification can be called complete.
+The B1–B3 implementations were audited against the ordered-queue specification on 2026-09-06 and repaired to it; [`docs/AUDIT_2026-09-06.md`](docs/AUDIT_2026-09-06.md) lists each finding with its disposition, and the [conformance roadmap](docs/ROADMAP.md) carries what remains.
 
 ## Quick start
 
@@ -57,11 +59,16 @@ framework-instruments/
 │   ├── b3-split-authorship/
 │   ├── b4-dilemma-reconstruction/
 │   ├── telemetry-vocabulary/
-│   └── runrecord.py
+│   ├── runrecord.py            # shared run record; imported by every script
+│   ├── coverage_pairs.py       # (script, status) pairs exercised over reachable
+│   └── test_*.py
+├── arena/                      # defect specimens, grading, path_probe.py, report.py
 ├── docs/
 │   ├── specifications/
+│   ├── AUDIT_2026-09-06.md
 │   └── ROADMAP.md
 ├── scripts/test-all.sh
+├── CLAUDE.md
 ├── CONTRIBUTING.md
 └── LICENSE
 ```

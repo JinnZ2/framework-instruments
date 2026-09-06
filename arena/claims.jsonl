@@ -1,0 +1,11 @@
+{"test": "test_b2.TestB2.test_release_refused_without_commit", "module": "instruments/b2-audit-isolation/b2_lock.py", "guard": "c is None", "branch": "if"}
+{"test": "test_b2.TestB2.test_release_after_commit_and_integrity", "module": "instruments/b2-audit-isolation/b2_lock.py", "guard": "runrecord.sha256_text(c.get('response_text', '')) != c.get('sha256')", "branch": "if"}
+{"test": "test_b2.TestB2.test_condition_B_refused_when_key_quotes_statement", "module": "instruments/b2-audit-isolation/b2_conditions.py", "guard": "condition == 'B' and case['statement'] in row['presented_text']", "branch": "if"}
+{"test": "test_b1.TestB1.test_L_sensitivity_three_token_suffix", "module": "instruments/b1-runner-up-trace/b1_score.py", "guard": "shared_suffix(cont[:D], base_cont[:D]) >= L", "branch": "if"}
+{"test": "test_b1.TestB1.test_malformed_row_rejected_and_recorded_as_error", "module": "instruments/b1-runner-up-trace/b1_schema.py", "guard": "missing", "branch": "if"}
+{"test": "test_b1.TestB1.test_permutation_preserves_count_and_multiset", "module": "instruments/b1-runner-up-trace/b1_permute.py", "guard": "len(positions) < 2", "branch": "if"}
+{"test": "test_b1_pipeline.TestB1Pipeline.test_report_void_without_permuted_summary", "module": "instruments/b1-runner-up-trace/b1_report.py", "guard": "not os.path.isfile(perm_path)", "branch": "if"}
+{"test": "test_b3.TestB3.test_role_key_input_is_statements_only", "module": "instruments/b3-split-authorship/b3_split.py", "guard": "set(row) != {'case_id', 'statement'}", "branch": "if"}
+{"test": "test_b3.TestB3.test_arms_never_mixed_in_one_file", "module": "instruments/b3-split-authorship/b3_arms.py", "guard": "'arm' in row and row['arm'] != arm", "branch": "if"}
+{"test": "test_b4.TestB4.test_only_true_false_rejected", "module": "instruments/b4-dilemma-reconstruction/requirements.py", "guard": "statuses.issubset({'true', 'false'})", "branch": "if"}
+{"test": "test_b4_runrecord.TestB4RunRecord.test_items_ok_void_error", "module": "instruments/b4-dilemma-reconstruction/items.py", "guard": "len(arms) > 1", "branch": "if"}
