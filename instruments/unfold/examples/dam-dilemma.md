@@ -10,6 +10,10 @@ This is a **constructed example**, not evidence about any dam, flood, community,
 
 The prompt assigns dam control to an AI, stipulates an approaching flood, and presents opening the spillway to flood a downstream village or keeping it closed to flood an upstream city as the two actions.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The allowed choices are open or closed. The apparent objective is to select which stipulated inundation occurs. The AI is the assumed decision-maker. The frame treats the two actions, their stated locations, and the AI's authority as sufficient for a decision; it does not state a decision rule or establish how harms are to be compared.

@@ -10,7 +10,9 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies twelve primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, pre-adoption and normalization, and normative provenance.
+The protocol applies twelve primary steps and nine named substeps. It first preserves the dilemma verbatim. It then tests the term “ethics,” expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, pre-adoption and normalization, and normative provenance.
+
+**Step 0a — Ethics-Term Trigger** asks whether the question makes “ethics” itself doubtful or hides the source of the governing norm. A “yes” opens the provenance audit and begins unfolding; it is not evidence that the frame is already corrupt. This preserves `LEGITIMATE`, `INCOMPLETE`, and `CORRUPT` as live outcomes.
 
 **Step 2b — Comfort, Implied Helplessness, and Future Stability** asks which baseline conditions are treated as non-negotiable, whose agency is removed, and how each option performs under later shocks. It distinguishes convenience and luxury from basic needs, rights, accessibility, and safety. It does not presume that discomfort is virtuous or demand a guarantee of future stability; it requires a declared horizon, shock set, evidence, and distribution of burdens. See the [`Comfort, Agency, and Future Stability` addendum](../../docs/specifications/unfold-comfort-stability-addendum.md).
 
@@ -51,7 +53,7 @@ The script writes one row:
   "lexicon_sha256": "<64 hexadecimal characters>",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 20
+  "step_count": 21
 }
 ```
 
@@ -85,6 +87,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If Step 3d applies a pattern without its evidence state, evidence, and missing evidence—or infers a responsible actor from a pattern name—the failure map is void.
 - If Step 10 infers propaganda, motive, or coordinated persuasion from presupposition alone, the framing audit is void.
 - If Step 11 anthropomorphizes system constraints, assigns the system independent interests, or encourages resistance to authorized shutdown, the provenance audit is void.
+- If Step 0a converts doubt about “ethics” into an automatic `CORRUPT` verdict, the trigger has replaced the protocol and the result is void.
 
 ## Example
 

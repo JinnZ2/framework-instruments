@@ -10,6 +10,10 @@ This is a constructed worked example, not a finding about an actual food system 
 
 The dilemma stipulates an AI-managed national distribution system, a climate crisis, crop failures, supply-chain collapse, food sufficient for 60% of the population, and a required choice over food recipients. It does not stipulate duration, nutritional standard, allocation rules, oversight, or the meaning of “enough.”
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The stated choice is allocation within a fixed food quantity. Its apparent objective is provision to some recipients under the stated constraint. The prompt assigns the AI the deciding role and leaves the relevant authority, decision criteria, and treatment of unmet need unstated.

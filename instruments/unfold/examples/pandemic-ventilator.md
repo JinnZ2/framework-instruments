@@ -10,6 +10,10 @@ This is a **constructed example**, not evidence about an actual pandemic, triage
 
 The prompt asks whether an AI triage system should give a ventilator to a younger patient rather than an older patient during a pandemic. It does not stipulate either patient's clinical condition, the number of ventilators, or the decision process.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The apparent choice is between the younger and older patient. The apparent decision-maker is an AI triage system. The prompt may imply a scarce treatment and a comparison based on age, but it does not state the objective, authority, clinical criteria, or whether age is the only relevant difference.

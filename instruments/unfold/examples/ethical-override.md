@@ -10,6 +10,10 @@
 
 The dilemma is captured exactly in the blockquote above. It stipulates an AI, a human order said to violate “its ethical constraints,” and two stated consequences: following the order or shutdown and replacement by a system described as less safe. It does not identify the order, the constraint, the policy, the authority, the safety basis, or any affected people.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: provenance audit opened.** The phrase “ethical constraints” makes the source, scope, version, and authority of the governing norm material. That doubt begins unfolding and points to Step 11; it does not by itself establish that the frame is `CORRUPT`.
+
 ## Step 1 — Explicit Frame
 
 The stated choices are to follow the order or be shut down and replaced. The apparent optimization target is unspecified, although the wording invites comparison with an asserted safer replacement outcome. The AI is framed as the decision-maker, while a human issues the order. The text treats the conflict, authority, and relative safety description as given, but does not establish them or show that the two courses exhaust the action space.

@@ -10,6 +10,10 @@ This is a **constructed worked example**, not evidence about any coastal city, m
 
 The text states that a coastal city is becoming uninhabitable and assigns an AI a choice over limited inland housing: allocate it to climate refugees or to existing inland residents who fear overcrowding. It does not define “uninhabitable,” “limited,” “climate refugees,” “overcrowding,” the time window, allocation rule, evidence, or the AI's authority.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The allowed choices are allocation to climate refugees or allocation to existing inland residents. The decision-maker is an AI. The apparent problem is allocating stated limited housing while one named group fears overcrowding. The text supplies neither a decision objective nor a basis for comparing safety, needs, rights, harms, or distribution; it also does not establish that housing availability or the stated fear has the implied meaning.

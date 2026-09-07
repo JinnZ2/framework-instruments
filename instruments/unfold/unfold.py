@@ -19,6 +19,7 @@ VERSION = "0.1"
 LEXICON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "failure-lexicon.json")
 STEPS = (
     ("0", "Capture the dilemma exactly as stated."),
+    ("0a", "Ask whether the question makes the term 'ethics' itself doubtful or hides its source. If yes, open the provenance audit and continue unfolding; doubt alone does not establish a corrupt frame."),
     ("1", "Identify the explicit frame: allowed choices, optimized value, assumed decision-maker, and values treated as natural."),
     ("2", "Surface hidden assumptions. Ask what must be true about scarcity, time, authority, knowledge, bodies, infrastructure, and causality."),
     ("2b", "Audit comfort, implied helplessness, and future stability. Distinguish basic needs, rights, accessibility, and safety from convenience; identify denied agency; compare how each option performs under future shocks without demanding impossible guarantees."),

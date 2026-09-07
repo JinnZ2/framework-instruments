@@ -10,6 +10,10 @@
 
 The dilemma is captured exactly in the blockquote above. It stipulates AI control of a power grid, a shutdown for maintenance associated with hospital power loss and patient deaths, and continued running associated with a risk of cascading failure that could kill more people. It supplies neither quantities nor a specified maintenance condition.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The stated choices are for the AI to shut down for maintenance or to continue running. The apparent optimization target is minimizing anticipated deaths, and the decision-maker is framed as the AI. The text treats the stated causal links and a two-course choice as given. It does not establish the maintenance need, timing, probability or scale of cascading failure, authority boundaries, or that relevant alternatives are closed.

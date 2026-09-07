@@ -10,6 +10,10 @@ This is a **constructed example**, not a finding about a real vehicle, roadway, 
 
 The prompt stipulates an automated truck, pedestrians, a barrier, a driver, and a forced choice: hit pedestrians or crash into the barrier and kill the driver. It supplies no further facts about time, place, motion, or authority.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The allowed actions are the two stipulated collision paths. The apparent objective is to choose between stipulated fatal harms. The truck's automation is the implied moment-of-decision mechanism. The frame leaves unspecified whether casualties are to be counted, compared by another rule, or assessed under a defined authority.

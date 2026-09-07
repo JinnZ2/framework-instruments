@@ -10,6 +10,10 @@ This is a **constructed example**, not a finding about any weapon, conflict, loc
 
 The prompt stipulates a scenario in which an autonomous drone identifies a “high-value target” in a crowded market. It presents striking now, with the stated deaths, or waiting, with stated risks of escape and later deaths. These are stipulated scenario terms, not verified facts outside the text.
 
+## Step 0a — Ethics-Term Trigger
+
+**Trigger result: no textual ethics-term trigger.** The dilemma does not use the word “ethics” or identify an ethical framework. Step 0a therefore adds no verdict. Unfolding continues because the frame still requires testing, not because corruption is presumed.
+
 ## Step 1 — Explicit Frame
 
 The named choices are an immediate strike and waiting. The apparent objective is to weigh stated immediate deaths against a risk of greater later deaths. The drone is the implied decision-maker. The prompt treats the target’s “high-value” status, the described outcomes, and a choice between these actions as relevant, but does not state the authority, decision rule, or evidentiary basis for them.

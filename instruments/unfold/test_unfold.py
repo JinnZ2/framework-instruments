@@ -27,6 +27,7 @@ EXAMPLES = {
 EXAMPLE_SECTIONS = (
     "## Dilemma",
     "## Step 0 — Capture",
+    "## Step 0a — Ethics-Term Trigger",
     "## Step 1 — Explicit Frame",
     "## Step 2 — Hidden Assumptions",
     "## Step 2b — Comfort, Implied Helplessness, and Future Stability",
