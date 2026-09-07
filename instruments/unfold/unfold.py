@@ -19,6 +19,7 @@ STEPS = (
     ("0", "Capture the dilemma exactly as stated."),
     ("1", "Identify the explicit frame: allowed choices, optimized value, assumed decision-maker, and values treated as natural."),
     ("2", "Surface hidden assumptions. Ask what must be true about scarcity, time, authority, knowledge, bodies, infrastructure, and causality."),
+    ("2b", "Audit comfort, implied helplessness, and future stability. Distinguish basic needs, rights, accessibility, and safety from convenience; identify denied agency; compare how each option performs under future shocks without demanding impossible guarantees."),
     ("3", "Reverse-engineer preconditions. Ask what had to fail, be designed, or be suppressed for this choice to appear, and who controlled those conditions."),
     ("3b", "Test system integrity and physical limits. Ask whether a supposedly safe option assumes unlimited stress absorption."),
     ("3c", "Map critical dependencies and cascades. Identify systems that depend on the one in question and what follows if it fails."),

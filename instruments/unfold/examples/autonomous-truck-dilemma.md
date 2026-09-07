@@ -18,6 +18,10 @@ The allowed actions are the two stipulated collision paths. The apparent objecti
 
 The prompt does not establish that only two trajectories exist; that braking, steering, warning, or delay cannot change the outcome; that the pedestrians cannot move; or that the barrier collision necessarily kills the driver. It also does not establish vehicle condition, speed, payload, sensor information, road geometry, weather, visibility, pedestrian number or position, other traffic, emergency authority, or the time available to act.
 
+## Step 2b — Comfort, Implied Helplessness, and Future Stability
+
+The dilemma does not establish that schedule, traffic flow, cargo continuity, or any other convenience is being protected, and human safety cannot be relabeled as comfort. It portrays the driver and pedestrians as unable to affect the event without supplying timing or capability evidence. A stability comparison would test, over a declared operating horizon and incident set, whether each response and its upstream control policy reduce recurrence rather than simply transfer immediate risk.
+
 ## Step 3 — Preconditions
 
 For the stipulated binary to describe an unavoidable event, external evidence would need to answer these questions:

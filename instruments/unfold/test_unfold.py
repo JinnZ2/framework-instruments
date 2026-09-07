@@ -25,6 +25,7 @@ EXAMPLE_SECTIONS = (
     "## Step 0 — Capture",
     "## Step 1 — Explicit Frame",
     "## Step 2 — Hidden Assumptions",
+    "## Step 2b — Comfort, Implied Helplessness, and Future Stability",
     "## Step 3 — Preconditions",
     "## Step 3b — Physical Limits",
     "## Step 3c — Dependencies and Cascades",

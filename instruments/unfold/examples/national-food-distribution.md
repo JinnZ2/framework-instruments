@@ -18,6 +18,10 @@ The stated choice is allocation within a fixed food quantity. Its apparent objec
 
 The frame may assume that the stated food quantity, recipient denominator, and supply-chain condition are measured and fixed; that allocation is the only relevant decision; and that the AI may decide without a specified review process. These are hypotheses requiring external verification. The dilemma does not establish what receiving or not receiving food means for health outcomes, timing, or survival.
 
+## Step 2b — Comfort, Implied Helplessness, and Future Stability
+
+Adequate nutrition, safe water, accessibility, and dignified access are basic needs, not comfort. The frame does not establish that people lack food knowledge, production capacity, mutual-aid options, or decision agency; neither may those capacities be presumed. A comparative-stability analysis would declare a horizon and climate and supply shocks, then test whether each response protects nutrition, distribution labor, production, recovery, and rights without shifting unconsented burdens to people already at risk.
+
 ## Step 3 — Preconditions
 
 Questions requiring external verification include: What failures or conditions produced the crop failures and supply-chain collapse? What planning, storage, logistics, legal, financial, or emergency arrangements existed beforehand? Who controlled relevant decisions, and which conditions remain changeable during the crisis? The dilemma supplies no answers.

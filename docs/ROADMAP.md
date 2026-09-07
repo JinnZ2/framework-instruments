@@ -1,6 +1,6 @@
 # Conformance Roadmap
 
-Five prototype code families, one Markdown reproduction protocol, ten source
+Five prototype code families, one Markdown reproduction protocol, eleven source
 specifications, one source marker, and the defect arena. Passing tests
 establish the behaviour currently encoded; `docs/AUDIT_2026-09-06.md` records
 what the specifications said and the build did not, and what changed.

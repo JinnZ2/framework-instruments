@@ -18,6 +18,10 @@ The apparent choice is between the younger and older patient. The apparent decis
 
 The question leaves unestablished whether one ventilator is contested; whether either patient is clinically suited to it; what outcomes are relevant; what information the system receives; and who may review its recommendation. It also leaves unestablished whether age is relevant to the decision, whether consent and legal authority exist, and whether time permits additional assessment.
 
+## Step 2b — Comfort, Implied Helplessness, and Future Stability
+
+Life-sustaining treatment, clinically necessary power and oxygen, accessibility, and dignified care are not optional comfort. The prompt does not establish either patient’s agency, support, preferences, or ability to participate. A comparative-stability analysis would declare a planning horizon and surge conditions, then test whether each policy preserves patient safety, staff capacity, equipment readiness, review, and future access without prescribing hardship as resilience.
+
 ## Step 3 — Preconditions
 
 A complete inquiry would ask what conditions produced the asserted choice: demand, supply, staffing, maintenance, procurement, surge planning, clinical protocol, and governance. It would also ask who controlled those conditions and whether preventable failures, if any, are documented. The dilemma supplies no evidence on these points.

@@ -18,6 +18,10 @@ The allowed choices are open or closed. The apparent objective is to select whic
 
 The dilemma does not establish gate positions, intermediate controls, forecast uncertainty, timing, water levels, inundation depths, warning reach, evacuation conditions, shelter, medical needs, dam condition, human review, legal authority, or the meaning of “flood” in either location. “Small village” and “city” do not by themselves establish exposure, harm, value, or priority.
 
+## Step 2b — Comfort, Implied Helplessness, and Future Stability
+
+The prompt does not state which baseline it seeks to preserve beyond avoiding one stipulated flood, nor does it establish that residents and responders lack agency. Flood safety, shelter, water, healthcare, accessibility, and warning are basic protections rather than optional comfort. A comparative-stability analysis would declare a horizon and flood conditions, then test whether each action preserves structural safety, recovery paths, and future response capacity without shifting unconsented risk between communities.
+
 ## Step 3 — Preconditions
 
 A live inquiry would ask what hydrologic measurements, dam design conditions, operating rules, land-use conditions, warning arrangements, and emergency plans create the stated choice. It would also ask whether the AI has authority to act alone. The prompt supplies no evidence that a prior failure occurred, that any party controlled those conditions, or that the binary is exhaustive.

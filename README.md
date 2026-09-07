@@ -99,3 +99,4 @@ The repository is dedicated to the public domain under **CC0 1.0 Universal**. No
 [8]: docs/specifications/unfold-protocol.md "Unfold Protocol Specification"
 [9]: docs/specifications/unfold-human-skill-addendum.md "Unfold Human Skill and Experiential Knowledge Addendum"
 [10]: docs/specifications/unfold-lived-resilience-addendum.md "Unfold Lived Experience and Resilience Practices Addendum"
+[11]: docs/specifications/unfold-comfort-stability-addendum.md "Unfold Comfort, Agency, and Future Stability Addendum"

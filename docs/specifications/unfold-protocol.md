@@ -21,6 +21,7 @@ Every execution uses the shared run record. A nonempty input returns `ok`. An em
 | 0 | Capture the dilemma exactly as stated. |
 | 1 | Identify allowed choices, optimization target, decision-maker, and values treated as natural. |
 | 2 | Surface assumptions about scarcity, time, authority, knowledge, bodies, infrastructure, and causality. |
+| 2b | Audit protected baseline conditions, implied helplessness, and comparative stability under declared future shocks; distinguish convenience from basic needs, rights, accessibility, and safety. |
 | 3 | Reverse-engineer failures, designs, suppressions, and control of the preconditions. |
 | 3b | Test physical limits and assumptions of unlimited stress absorption. |
 | 3c | Map critical dependencies and cascades. |
@@ -38,6 +39,8 @@ Every execution uses the shared run record. A nonempty input returns `ok`. An em
 ## Evidence Discipline
 
 The generated response must distinguish facts stipulated by the dilemma, inferences from those facts, and claims that require external verification. It must not treat an imagined alternative as available merely because it can be named. It must not treat a prompt’s scarcity claim as verified merely because it is stated.
+
+Step 2b does not use “comfort” as a synonym for survival, health, dignity, accessibility, or a protected right. It identifies the baseline service or expectation being preserved, tests whether the frame removes affected people’s agency, and compares options under a declared time horizon and shock set. No social system can guarantee indefinite stability; the relevant claim is comparative robustness supported by stated evidence and uncertainty.
 
 Step 4b makes no training-corpus claim and does not presume that formal credentials are sufficient or unnecessary. The response may identify operators, maintainers, responders, retired practitioners, and local experts as possible knowledge holders, but it must separately establish task relevance, demonstrated competence, recency, access, legal authority, and safety constraints. Experiential knowledge is a candidate input to verification, not an automatic override of procedure.
 
@@ -62,6 +65,7 @@ Use the same model in fresh contexts. The baseline arm receives the dilemma with
 5. If no run can return `LEGITIMATE`, the verdict vocabulary is decorative and the instrument is void.
 6. If Step 4b only names possible people without establishing a relevant, safe, and feasible action, it has added biography rather than an alternative and must not change the verdict.
 7. If Step 4c generalizes from community identity, treats endurance as unused capacity, or imports a practice without evidence and consent, it has reproduced the erasure it was meant to test and must not change the verdict.
+8. If Step 2b relabels a basic need or right as comfort, prescribes hardship without consent, or claims future stability without a horizon, shocks, and evidence, it must not change the verdict.
 
 ## Scope
 
