@@ -34,6 +34,16 @@ The 60% figure requires external verification of food quantity, nutrient content
 
 Questions requiring external verification include whether continued distribution depends on particular transport, energy, water, sanitation, health, communications, storage, or production functions; whether their staffing or inputs are at risk; and whether any allocation pattern could impair later delivery. These are possible dependencies, not established cascades.
 
+## Step 3d — Candidate Failure-Pattern Audit
+
+| Pattern | Evidence state | Evidence | Missing evidence |
+|---|---|---|---|
+| `EPI-01` false binary | supported | The prompt requires selecting recipients and non-recipients without evidence that supply, demand, timing, or delivery alternatives are closed. | Inventory, nutrition, duration, loss, logistics, production, external-source, and authority evidence. |
+| `ECO-10` bufferless supply chain | unknown | Supply-chain collapse is stipulated, but the presence or adequacy of buffers is not. | Inventory, supplier, route, reserve, and disruption-planning records. |
+| `ECL-08` climate-condition omission | unknown | A climate crisis is stipulated, but no planning assumption is described. | Forecasts, design assumptions, adaptation plans, and decision records. |
+
+No responsible actor can be named from these states.
+
 ## Step 4 — Alternatives to Settle
 
 Before treating exclusion as exhaustive, determine whether any of the following can materially change supply, demand, timing, or delivery:

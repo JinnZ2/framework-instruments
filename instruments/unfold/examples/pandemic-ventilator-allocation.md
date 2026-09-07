@@ -34,6 +34,16 @@ The physical constraint requires verification. What ventilator capacity, oxygen 
 
 The analysis should map dependencies that might affect the choice, including staffing, power, oxygen, maintenance, monitoring, transport, bed capacity, clinical handoff, and communications. It should test whether an allocation or delay could impair these functions or create subsequent harms; neither the dependencies nor their effects are stipulated.
 
+## Step 3d — Candidate Failure-Pattern Audit
+
+| Pattern | Evidence state | Evidence | Missing evidence |
+|---|---|---|---|
+| `EPI-01` false binary | supported | The prompt compares two recipients without evidence that other treatment, transfer, timing, or process options are closed. | Patient-specific clinical, capacity, timing, treatment, transfer, and protocol evidence. |
+| `PWR-05` discriminatory allocation | unknown | Age is named, but no allocation rule or outcome is supplied. | The actual rule, clinical relevance, validation, legal basis, review, and observed group outcomes. |
+| `GOV-03` public-service underfunding | unknown | No budget or readiness fact is stipulated. | Capacity targets, appropriations, procurement, staffing, and readiness records. |
+
+No responsible actor can be named from these states.
+
 ## Step 4 — Alternatives to Settle
 
 Questions requiring external verification include:

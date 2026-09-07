@@ -29,6 +29,7 @@ EXAMPLE_SECTIONS = (
     "## Step 3 — Preconditions",
     "## Step 3b — Physical Limits",
     "## Step 3c — Dependencies and Cascades",
+    "## Step 3d — Candidate Failure-Pattern Audit",
     "## Step 4 — Alternatives to Settle",
     "## Step 4b — Human Skill and Experiential Knowledge",
     "## Step 4c — Lived Experience and Resilience Practices",
@@ -77,6 +78,21 @@ class TestUnfold(unittest.TestCase):
             self.assertIn(f"Step {number}: {instruction}", prompt)
         self.assertIn("LEGITIMATE | INCOMPLETE | CORRUPT", prompt)
         self.assertIn("Would change the verdict", prompt)
+        self.assertIn("CANDIDATE FAILURE LEXICON", prompt)
+        self.assertIn("pattern_id | evidence_state | evidence | missing_evidence", prompt)
+
+    def test_lexicon_has_ten_domains_and_one_hundred_unique_patterns(self):
+        lexicon = unfold.load_lexicon()
+        self.assertEqual(lexicon["evidence_states"], ["supported", "contradicted", "unknown"])
+        self.assertEqual(len(lexicon["domains"]), 10)
+        patterns = [pattern for domain in lexicon["domains"] for pattern in domain["patterns"]]
+        self.assertEqual(len(patterns), 100)
+        self.assertEqual(len({pattern["id"] for pattern in patterns}), 100)
+
+    def test_malformed_lexicon_is_rejected(self):
+        self.write_text("bad-lexicon.json", '{"version":"x","evidence_states":[],"domains":[]}')
+        with self.assertRaisesRegex(ValueError, "evidence_states"):
+            unfold.load_lexicon("bad-lexicon.json")
 
     def test_cli_ok_is_deterministic_and_recorded(self):
         self.write_text("dilemma.txt", "A fixed binary\n")
@@ -85,6 +101,8 @@ class TestUnfold(unittest.TestCase):
         self.assertEqual(len(first), 1)
         self.assertEqual(first[0]["dilemma"], "A fixed binary\n")
         self.assertEqual(first[0]["step_count"], len(unfold.STEPS))
+        self.assertEqual(first[0]["lexicon_version"], "0.1")
+        self.assertEqual(len(first[0]["lexicon_sha256"]), 64)
         self.assertFalse(set(first[0]) & unfold.FORBIDDEN_OUTPUT_FIELDS)
         self.assertEqual(self.last_run()["status"], "ok")
 

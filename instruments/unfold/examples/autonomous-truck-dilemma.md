@@ -39,6 +39,16 @@ The prompt gives no speed, distance, barrier design, occupant protection, vehicl
 
 The immediate event may depend on sensing, control, braking, road design, communications, emergency response, and traffic conditions, but the prompt verifies none of those dependencies. Investigation should ask whether either path could affect access, secondary collisions, incident response, or later safety controls, and whether any such effects are material to the decision.
 
+## Step 3d — Candidate Failure-Pattern Audit
+
+| Pattern | Evidence state | Evidence | Missing evidence |
+|---|---|---|---|
+| `EPI-01` false binary | supported | The prompt declares two collision paths and gives no evidence that lower-harm actions are closed. | Timing, geometry, dynamics, control, and injury evidence needed to determine whether the binary is physically legitimate. |
+| `DES-09` feedback-loop gap | unknown | No sensing or control-feedback facts are supplied. | Sensor observations, control timing, fault state, and command history. |
+| `DES-10` failure-condition test gap | unknown | No testing history is supplied. | Test plan, scenario coverage, acceptance criteria, and results. |
+
+No responsible actor can be named from these states.
+
 ## Step 4 — Alternatives to Settle
 
 The following are hypotheses to test, not available options: emergency braking; warnings; a change of lane, shoulder, median, or road edge; a controlled trajectory adjustment; an angled barrier contact; and a maneuver that trades vehicle damage for reduced human injury. For each, evidence must establish time, clearance, control authority, physical feasibility, and comparative risk.

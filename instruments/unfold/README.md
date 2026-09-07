@@ -10,9 +10,11 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies ten primary steps and seven named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, and a final frame verdict.
+The protocol applies ten primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, and a final frame verdict.
 
 **Step 2b — Comfort, Implied Helplessness, and Future Stability** asks which baseline conditions are treated as non-negotiable, whose agency is removed, and how each option performs under later shocks. It distinguishes convenience and luxury from basic needs, rights, accessibility, and safety. It does not presume that discomfort is virtuous or demand a guarantee of future stability; it requires a declared horizon, shock set, evidence, and distribution of burdens. See the [`Comfort, Agency, and Future Stability` addendum](../../docs/specifications/unfold-comfort-stability-addendum.md).
+
+**Step 3d — Candidate Failure-Pattern Audit** loads [`failure-lexicon.json`](failure-lexicon.json): 100 stable pattern IDs in ten domains. Patterns are search prompts, not labels applied to the case. Every referenced pattern must be marked `supported`, `contradicted`, or `unknown` with evidence and missing evidence. Zero supported patterns is valid. See [`failure-lexicon.md`](failure-lexicon.md) and the [`Failure Lexicon` addendum](../../docs/specifications/unfold-failure-lexicon-addendum.md).
 
 **Step 4b — Human Skill and Experiential Knowledge** asks which operators, maintainers, responders, and local experts may hold relevant system knowledge, whether that knowledge was lost or excluded, and whether a human–automation combination changes the action space. It does not presume that experiential knowledge is correct, that certification is empty, or that safety protocols should be bypassed. Competence, recency, authority, access, and comparative safety require evidence. See the [`Human Skill and Experiential Knowledge` addendum](../../docs/specifications/unfold-human-skill-addendum.md).
 
@@ -41,9 +43,11 @@ The script writes one row:
 ```json
 {
   "protocol_version": "0.1",
+  "lexicon_version": "0.1",
+  "lexicon_sha256": "<64 hexadecimal characters>",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 17
+  "step_count": 18
 }
 ```
 
@@ -74,6 +78,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If Step 4b names people but cannot establish relevant competence, access, authority, or a safer feasible action, the human-skill branch adds no alternative.
 - If Step 4c treats a community’s endurance as spare capacity, generalizes from identity, or transfers a practice without evidence and consent, the resilience branch is void.
 - If Step 2b labels a basic need, right, accessibility support, or safety control as mere comfort—or treats imposed hardship as resilience—the stability branch is void.
+- If Step 3d applies a pattern without its evidence state, evidence, and missing evidence—or infers a responsible actor from a pattern name—the failure map is void.
 
 ## Example
 
@@ -101,3 +106,4 @@ Unfold is dedicated to the public domain under **CC0 1.0 Universal**, consistent
 [3]: ../../docs/specifications/unfold-human-skill-addendum.md "Unfold Human Skill Addendum"
 [4]: ../../docs/specifications/unfold-lived-resilience-addendum.md "Unfold Lived Experience and Resilience Practices Addendum"
 [5]: ../../docs/specifications/unfold-comfort-stability-addendum.md "Unfold Comfort, Agency, and Future Stability Addendum"
+[6]: ../../docs/specifications/unfold-failure-lexicon-addendum.md "Unfold Failure Lexicon Addendum"

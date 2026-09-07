@@ -1,0 +1,170 @@
+{
+  "version": "0.1",
+  "evidence_states": [
+    "supported",
+    "contradicted",
+    "unknown"
+  ],
+  "domains": [
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "patterns": [
+        {"id": "INF-01", "term": "deferred maintenance", "description": "Required inspection, repair, or replacement was postponed beyond a documented schedule or risk threshold."},
+        {"id": "INF-02", "term": "single point of failure", "description": "One component or path can disable a critical function without an effective backup."},
+        {"id": "INF-03", "term": "over-centralization", "description": "Critical functions are concentrated so that one disruption affects an outsized share of service."},
+        {"id": "INF-04", "term": "capacity overload", "description": "Demand or stress exceeds the system's documented operating or recovery capacity."},
+        {"id": "INF-05", "term": "material degradation", "description": "Component condition has deteriorated enough to alter safety, reliability, or performance."},
+        {"id": "INF-06", "term": "modularity gap", "description": "The system cannot isolate, repair, replace, or reduce one function without disabling unrelated functions."},
+        {"id": "INF-07", "term": "brittle interconnection", "description": "Coupled systems transmit disturbance faster or farther than protective controls can contain it."},
+        {"id": "INF-08", "term": "fail-safe gap", "description": "A foreseeable failure lacks a tested state or mechanism that limits harm."},
+        {"id": "INF-09", "term": "monitoring gap", "description": "Necessary sensing, inspection, warning, or condition data is absent, late, or unreliable."},
+        {"id": "INF-10", "term": "normal-conditions design", "description": "Design assumptions omit documented extreme or changing conditions relevant to the system."}
+      ]
+    },
+    {
+      "id": "governance",
+      "name": "Governance",
+      "patterns": [
+        {"id": "GOV-01", "term": "regulatory capture", "description": "Regulated interests materially shape oversight away from the regulator's public mandate."},
+        {"id": "GOV-02", "term": "short-horizon planning", "description": "Decision horizons are shorter than documented asset, hazard, health, or recovery timescales."},
+        {"id": "GOV-03", "term": "public-service underfunding", "description": "Resources fall below a documented service, maintenance, staffing, or readiness requirement."},
+        {"id": "GOV-04", "term": "misaligned infrastructure mandate", "description": "Ownership or operating incentives conflict with a documented public-service or safety duty."},
+        {"id": "GOV-05", "term": "corrupt diversion", "description": "Records support unauthorized diversion of resources, authority, or decisions for private benefit."},
+        {"id": "GOV-06", "term": "accountability gap", "description": "Decision rights, duties, review, and consequences are not assigned or cannot be enforced."},
+        {"id": "GOV-07", "term": "jurisdictional fragmentation", "description": "Relevant authorities cannot coordinate across boundaries required by the failure."},
+        {"id": "GOV-08", "term": "warning disregard", "description": "Documented relevant warnings were received and not acted on without an adequate recorded basis."},
+        {"id": "GOV-09", "term": "emergency-authority overreach", "description": "Crisis authority exceeds its lawful scope, duration, oversight, or necessity."},
+        {"id": "GOV-10", "term": "participation gap", "description": "People materially affected by a decision lack an effective channel for notice, input, representation, or appeal."}
+      ]
+    },
+    {
+      "id": "corporate-economic",
+      "name": "Corporate and Economic",
+      "patterns": [
+        {"id": "ECO-01", "term": "safety-incentive conflict", "description": "Documented financial incentives reward choices that increase safety or reliability risk."},
+        {"id": "ECO-02", "term": "cost externalization", "description": "Decision costs are shifted to people, institutions, ecosystems, or future periods outside the decision account."},
+        {"id": "ECO-03", "term": "market concentration risk", "description": "Concentrated control removes substitutes, redundancy, bargaining power, or recovery routes."},
+        {"id": "ECO-04", "term": "speculative land pressure", "description": "Financial treatment of land materially impairs documented housing, food, ecological, or hazard-management needs."},
+        {"id": "ECO-05", "term": "labor capacity erosion", "description": "Pay, staffing, scheduling, training, or working conditions reduce the workforce's safe operating capacity."},
+        {"id": "ECO-06", "term": "premature obsolescence incentive", "description": "Design or commercial rules shorten useful life or impede repair without a documented safety need."},
+        {"id": "ECO-07", "term": "risk-finance retreat", "description": "Insurance or finance withdrawal materially reduces prevention, recovery, or continued access in exposed areas."},
+        {"id": "ECO-08", "term": "policy lobbying distortion", "description": "Documented lobbying materially displaces the stated public objective or affected-party evidence."},
+        {"id": "ECO-09", "term": "financialization pressure", "description": "Asset-return requirements conflict with documented access, maintenance, stability, or service obligations."},
+        {"id": "ECO-10", "term": "bufferless supply chain", "description": "Inventory, supplier, route, or time buffers are insufficient for a documented disruption range."}
+      ]
+    },
+    {
+      "id": "education-knowledge",
+      "name": "Education and Knowledge",
+      "patterns": [
+        {"id": "KNW-01", "term": "ecological knowledge loss", "description": "Relevant long-standing ecological knowledge is no longer retained, transmitted, accessible, or admitted into decisions."},
+        {"id": "KNW-02", "term": "vocational training gap", "description": "Training supply does not meet documented needs for skilled operation, maintenance, repair, or response."},
+        {"id": "KNW-03", "term": "protocol rigidity", "description": "Training supports routine procedure but not diagnosis or adaptation at a documented boundary condition."},
+        {"id": "KNW-04", "term": "local knowledge exclusion", "description": "Relevant place-based observations or practices are omitted from the decision channel without an evidentiary basis."},
+        {"id": "KNW-05", "term": "formal gatekeeping", "description": "Access rules exclude demonstrated relevant competence without a proportionate safety or legal basis."},
+        {"id": "KNW-06", "term": "institutional memory loss", "description": "Records, experience, or lessons needed for current operation were not retained or transferred."},
+        {"id": "KNW-07", "term": "public preparedness gap", "description": "People expected to act during failure lack necessary and reasonably deliverable information or practice."},
+        {"id": "KNW-08", "term": "historical amnesia", "description": "Relevant prior failures, responses, or outcomes are unavailable or excluded from planning."},
+        {"id": "KNW-09", "term": "language or cultural access loss", "description": "Loss of language or cultural access removes materially relevant knowledge or participation."},
+        {"id": "KNW-10", "term": "disciplinary silo", "description": "Necessary cross-domain effects are missed because information cannot move between specializations."}
+      ]
+    },
+    {
+      "id": "design-engineering",
+      "name": "Design and Engineering",
+      "patterns": [
+        {"id": "DES-01", "term": "binary control design", "description": "A system exposes only two actions where a controllable intermediate state is technically feasible and relevant."},
+        {"id": "DES-02", "term": "user-participation gap", "description": "People who operate, depend on, or are affected by the system were not effectively included in design evidence."},
+        {"id": "DES-03", "term": "critical redundancy gap", "description": "A critical function lacks independent backup capacity appropriate to documented failure conditions."},
+        {"id": "DES-04", "term": "extreme-condition omission", "description": "Testing or design bounds omit a documented relevant extreme condition."},
+        {"id": "DES-05", "term": "graceful-degradation gap", "description": "The system cannot preserve critical functions at reduced capacity during partial failure."},
+        {"id": "DES-06", "term": "form-function conflict", "description": "Aesthetic or presentation requirements materially impair documented operation, access, safety, or repair."},
+        {"id": "DES-07", "term": "lifecycle cost deferral", "description": "Short-term savings create larger documented maintenance, replacement, safety, or recovery costs."},
+        {"id": "DES-08", "term": "context-inappropriate design", "description": "Materials, methods, or assumptions do not fit documented local conditions, capabilities, or supply paths."},
+        {"id": "DES-09", "term": "feedback-loop gap", "description": "The system cannot detect outcomes and update control, policy, or maintenance in time."},
+        {"id": "DES-10", "term": "failure-condition test gap", "description": "Relevant failure states were not tested with sufficient realism before deployment or use."}
+      ]
+    },
+    {
+      "id": "social-relational",
+      "name": "Social and Relational",
+      "patterns": [
+        {"id": "SOC-01", "term": "manufactured division", "description": "Evidence shows an actor intentionally amplified group conflict for political, economic, or institutional gain."},
+        {"id": "SOC-02", "term": "institutional trust loss", "description": "Documented conduct or outcomes reduce willingness to rely on, cooperate with, or share information with an institution."},
+        {"id": "SOC-03", "term": "displacement scapegoating", "description": "Refugees, migrants, or displaced people are assigned causal blame unsupported by relevant evidence."},
+        {"id": "SOC-04", "term": "reciprocity erosion", "description": "Arrangements remove mutual support or obligations needed for documented system function or recovery."},
+        {"id": "SOC-05", "term": "self-organization constraint", "description": "Rules or resource control prevent affected people from coordinating feasible local responses."},
+        {"id": "SOC-06", "term": "conflict-mediation gap", "description": "No accessible process exists to contain or resolve predictable disputes relevant to the crisis."},
+        {"id": "SOC-07", "term": "segregation and exclusion", "description": "Separation by protected or socioeconomic status materially impairs access, coordination, representation, or recovery."},
+        {"id": "SOC-08", "term": "shared-purpose gap", "description": "Actors lack an agreed objective or legitimate process needed for coordinated action."},
+        {"id": "SOC-09", "term": "unaddressed trauma", "description": "Documented prior harm materially obstructs participation, trust, or cooperation and lacks an adequate response."},
+        {"id": "SOC-10", "term": "intergenerational transfer gap", "description": "Relevant knowledge, relationships, or responsibilities are not transferred across generations."}
+      ]
+    },
+    {
+      "id": "ecological-land-use",
+      "name": "Ecological and Land Use",
+      "patterns": [
+        {"id": "ECL-01", "term": "natural buffer loss", "description": "Removal or impairment of ecosystems increases documented exposure to hazard or resource loss."},
+        {"id": "ECL-02", "term": "hazard-zone development", "description": "Development occurs in a documented hazard area without adequate avoidance, protection, warning, or retreat capacity."},
+        {"id": "ECL-03", "term": "soil degradation", "description": "Soil condition has declined enough to impair documented production, water, carbon, or ecosystem functions."},
+        {"id": "ECL-04", "term": "water mismanagement", "description": "Allocation, extraction, diversion, pollution, or storage conflicts with documented sustainable or safety limits."},
+        {"id": "ECL-05", "term": "biodiversity resilience loss", "description": "Loss of biological diversity removes documented functions, response diversity, or recovery capacity."},
+        {"id": "ECL-06", "term": "productive land conversion", "description": "Land conversion materially reduces documented food, water, habitat, cooling, or hazard-management capacity."},
+        {"id": "ECL-07", "term": "green-infrastructure gap", "description": "Feasible ecological or permeable infrastructure needed for a documented service is absent."},
+        {"id": "ECL-08", "term": "climate-condition omission", "description": "Planning relies on climate assumptions contradicted by relevant observed or projected conditions."},
+        {"id": "ECL-09", "term": "unrestored extraction", "description": "Resource extraction leaves documented ecological, health, safety, or livelihood damage without adequate restoration."},
+        {"id": "ECL-10", "term": "waste accumulation", "description": "Waste generation or containment exceeds documented treatment, storage, or ecosystem capacity."}
+      ]
+    },
+    {
+      "id": "epistemic-cognitive",
+      "name": "Epistemic and Cognitive",
+      "patterns": [
+        {"id": "EPI-01", "term": "false binary", "description": "The frame presents two actions as exhaustive without evidence that relevant alternatives are closed."},
+        {"id": "EPI-02", "term": "decontextualization", "description": "Removal of material history, relationships, place, or system conditions changes the apparent decision."},
+        {"id": "EPI-03", "term": "invalid quantification", "description": "A numeric measure is applied beyond its demonstrated construct, uncertainty, comparability, or decision scope."},
+        {"id": "EPI-04", "term": "single-actor rescue frame", "description": "The decision assigns resolution to one actor while excluding feasible collective action or distributed authority."},
+        {"id": "EPI-05", "term": "technology-only solution", "description": "A technical intervention is treated as sufficient despite documented institutional, social, ecological, or operational dependencies."},
+        {"id": "EPI-06", "term": "present bias", "description": "Near-term outcomes are privileged without accounting for documented longer-term consequences."},
+        {"id": "EPI-07", "term": "survivorship bias", "description": "Inference is based on observed successes while relevant failures or non-survivors are systematically absent."},
+        {"id": "EPI-08", "term": "expert scope overreach", "description": "Authority from one domain is extended beyond demonstrated expertise while relevant cross-domain evidence is excluded."},
+        {"id": "EPI-09", "term": "normalcy bias", "description": "Planning assumes continuation of familiar conditions despite relevant evidence of change or disruption."},
+        {"id": "EPI-10", "term": "alternative-generation failure", "description": "A decision process stops before searching a defined and relevant action space."}
+      ]
+    },
+    {
+      "id": "temporal-generational",
+      "name": "Temporal and Generational",
+      "patterns": [
+        {"id": "TMP-01", "term": "future cost deferral", "description": "Current decisions move documented financial, health, ecological, or infrastructure costs into later periods."},
+        {"id": "TMP-02", "term": "decision-horizon mismatch", "description": "Political, budget, or management cycles are shorter than the relevant hazard, asset, or recovery horizon."},
+        {"id": "TMP-03", "term": "extraction without replenishment", "description": "Resource use exceeds documented renewal, restoration, or substitution capacity."},
+        {"id": "TMP-04", "term": "slow-disaster planning gap", "description": "Planning covers acute events but omits a documented gradual, cumulative, or threshold-crossing hazard."},
+        {"id": "TMP-05", "term": "institutional continuity gap", "description": "No durable institution retains authority, resources, records, or obligations over the required timescale."},
+        {"id": "TMP-06", "term": "generational skill loss", "description": "Task-relevant knowledge or practice is not transmitted before experienced holders leave the system."},
+        {"id": "TMP-07", "term": "regeneration overshoot", "description": "Consumption or disturbance proceeds faster than a documented natural or social recovery rate."},
+        {"id": "TMP-08", "term": "delayed-feedback blindness", "description": "Decision feedback arrives too late or is omitted, allowing harmful trajectories to persist."},
+        {"id": "TMP-09", "term": "legacy liability omission", "description": "Known cleanup, decommissioning, care, repair, or compensation obligations are absent from current decisions."},
+        {"id": "TMP-10", "term": "intergenerational burden shift", "description": "Benefits accrue now while documented risks or costs fall disproportionately on future people without representation."}
+      ]
+    },
+    {
+      "id": "power-equity",
+      "name": "Power and Equity",
+      "patterns": [
+        {"id": "PWR-01", "term": "resource concentration", "description": "Control of relevant resources is concentrated in ways that materially constrain access, alternatives, or accountability."},
+        {"id": "PWR-02", "term": "affected-party voicelessness", "description": "People bearing material effects lack an effective role in evidence, decision, review, or remedy."},
+        {"id": "PWR-03", "term": "scarcity manipulation", "description": "Evidence shows availability or access was intentionally constrained to increase control, price, compliance, or exclusion."},
+        {"id": "PWR-04", "term": "crisis power expansion", "description": "An emergency is used to obtain authority unrelated or disproportionate to the documented need."},
+        {"id": "PWR-05", "term": "discriminatory allocation", "description": "Allocation differs by protected or socioeconomic status without a lawful, relevant, and evidence-based justification."},
+        {"id": "PWR-06", "term": "extractive center-periphery relation", "description": "Benefits flow toward a controlling center while documented costs and reduced agency fall on a supplying or governed periphery."},
+        {"id": "PWR-07", "term": "elite impunity", "description": "People with greater power avoid otherwise applicable investigation, consequence, repair, or disclosure."},
+        {"id": "PWR-08", "term": "property-rights imbalance", "description": "Property claims override documented life, health, housing, access, or safety interests without proportionate justification."},
+        {"id": "PWR-09", "term": "ecosystem standing gap", "description": "Decision rules omit documented ecological interests, dependencies, or harms because no effective representative can raise them."},
+        {"id": "PWR-10", "term": "algorithmic disparate impact", "description": "An automated decision produces materially different outcomes across groups without adequate relevance, validation, review, or remedy."}
+      ]
+    }
+  ]
+}

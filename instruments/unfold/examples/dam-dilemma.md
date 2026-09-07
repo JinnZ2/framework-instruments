@@ -34,6 +34,16 @@ Physical assessment would need verified inflow forecasts, reservoir elevation, s
 
 The analysis should map, if applicable, dependencies on power, water, transport, communications, healthcare, shelter, and emergency response. It should test whether inundation or a dam malfunction could alter those systems and create later harms. The prompt does not establish that any of these dependencies exist or that a cascade will occur.
 
+## Step 3d — Candidate Failure-Pattern Audit
+
+| Pattern | Evidence state | Evidence | Missing evidence |
+|---|---|---|---|
+| `EPI-01` false binary | supported | The prompt presents exactly two actions and supplies no evidence that other timely actions are closed. | Hydrologic, operational, timing, and response evidence needed to determine whether the binary is physically legitimate. |
+| `DES-01` binary control design | unknown | The prompt describes open and closed actions. | Gate design, control states, operating rules, and feasible modulation. |
+| `INF-01` deferred maintenance | unknown | No maintenance fact is stipulated. | Inspection, maintenance, defect, and decision records. |
+
+No responsible actor can be named from these states.
+
 ## Step 4 — Alternatives to Settle
 
 The run should determine, rather than assume, whether gate modulation, staged releases, forecast updates, warnings, evacuation, temporary protection, coordination with emergency services, upstream storage changes, or a human decision process are feasible in time. It must also determine whether these measures create different hazards. Naming an alternative is not evidence that it is available or safer.
