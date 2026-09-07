@@ -106,10 +106,11 @@ def check_coverage(tree):
                 obs["exercised"] == 69 and obs["reachable"] == 72 and missing == ["b4/items.py:empty", "b4/nullshuffle.py:empty", "b4/requirements.py:empty"])]
 
 
-def check_probe():
+def check_probe(tree):
+    """Probe the claims file AS OF the reviewed commit; the live one has grown since."""
     with tempfile.TemporaryDirectory() as tmp:
-        subprocess.run([sys.executable, os.path.join(ROOT, "arena", "path_probe.py"),
-                        os.path.join(ROOT, "arena", "claims.jsonl"), "7", "probe.jsonl"], cwd=tmp, capture_output=True, text=True)
+        subprocess.run([sys.executable, os.path.join(tree, "arena", "path_probe.py"),
+                        os.path.join(tree, "arena", "claims.jsonl"), "7", "probe.jsonl"], cwd=tmp, capture_output=True, text=True)
         rows = [r for _, r in runrecord.read_jsonl(os.path.join(tmp, "probe.jsonl"))]
     still = [r["test"].split(".")[-1] for r in rows if r["still_passes"] is True]
     obs = {"claims": len(rows), "still_passes_false": sum(1 for r in rows if r["still_passes"] is False), "still_passes_true": still}
@@ -173,7 +174,7 @@ def check_dates_and_quotes():
 def check(out_path):
     tree = old_tree()
     rows = (check_commits() + check_lines(tree) + check_specs(tree) + check_arena() + check_coverage(tree)
-            + check_probe() + check_figure3() + check_dates_and_quotes())
+            + check_probe(tree) + check_figure3() + check_dates_and_quotes())
     runrecord.write_jsonl(out_path, rows)
     counts = {"checks": len(rows), "agree": sum(1 for r in rows if r["agrees"] is True),
               "disagree": sum(1 for r in rows if r["agrees"] is False), "not_evaluable": sum(1 for r in rows if r["agrees"] is None)}

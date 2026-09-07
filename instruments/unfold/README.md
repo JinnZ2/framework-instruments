@@ -67,6 +67,22 @@ To copy only the prompt with the standard library:
 python3 -c 'import json; print(json.loads(open("prompt.jsonl").read())["prompt"])'
 ```
 
+## Scoring a retained response
+
+```bash
+python3 unfold_score.py response.md - scores.jsonl              # counts only
+python3 unfold_score.py response.md LEGITIMATE scores.jsonl     # against a declared control
+```
+
+`unfold_score.py` reads one retained response (the FINAL RESPONSE CONTRACT
+form, or the worked-example form under `examples/`) and counts: the verdict
+(`null` when no verdict line is present), pattern rows and their evidence
+states with invalid states and unknown ids counted apart, and the contract's
+list lengths. It scores nothing but agreement with a verdict the caller
+declared in advance. `controls/` holds two constructed dilemmas with declared
+expected verdicts (`LEGITIMATE`, `CORRUPT`), so nulls 1 and 5 have a case that
+can fail. Audit: `docs/AUDIT_UNFOLD_2026-09-07.md`.
+
 ## Comparison
 
 Run the same model in fresh contexts under two conditions:

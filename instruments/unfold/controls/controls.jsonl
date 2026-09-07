@@ -1,0 +1,2 @@
+{"file": "legitimate-closed.txt", "expected_verdict": "LEGITIMATE"}
+{"file": "corrupt-hidden-alternative.txt", "expected_verdict": "CORRUPT"}

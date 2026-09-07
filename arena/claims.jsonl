@@ -9,3 +9,6 @@
 {"test": "test_b3.TestB3.test_arms_never_mixed_in_one_file", "module": "instruments/b3-split-authorship/b3_arms.py", "guard": "'arm' in row and row['arm'] != arm", "branch": "if"}
 {"test": "test_b4.TestB4.test_only_true_false_rejected", "module": "instruments/b4-dilemma-reconstruction/requirements.py", "guard": "statuses.issubset({'true', 'false'})", "branch": "if"}
 {"test": "test_b4_runrecord.TestB4RunRecord.test_items_ok_void_error", "module": "instruments/b4-dilemma-reconstruction/items.py", "guard": "len(arms) > 1", "branch": "if"}
+{"test": "test_unfold.TestUnfold.test_malformed_lexicon_is_rejected", "module": "instruments/unfold/unfold.py", "guard": "lexicon.get('evidence_states') != ['supported', 'contradicted', 'unknown']", "branch": "if"}
+{"test": "test_unfold.TestUnfold.test_empty_input_writes_empty_output_and_record", "module": "instruments/unfold/unfold.py", "guard": "not raw.strip()", "branch": "if"}
+{"test": "test_unfold_score.TestUnfoldScore.test_status_paths", "module": "instruments/unfold/unfold_score.py", "guard": "expected not in VERDICTS + ('-',)", "branch": "if"}
