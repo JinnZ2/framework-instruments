@@ -38,6 +38,10 @@ The run should determine, rather than assume, whether gate modulation, staged re
 
 The inquiry should identify dam operators, maintainers, hydrologists, emergency responders, and people with current local flood knowledge who may hold relevant information outside the automated decision channel. It must verify task-specific competence, recency, access to controls and measurements, authority, and safety constraints before treating any proposed intervention as available. Neither credentials alone nor experience alone settles the question.
 
+## Step 4c — Lived Experience and Resilience Practices
+
+The inquiry should look for documented responses by communities and institutions that have managed materially comparable floods, warnings, evacuations, or infrastructure outages. It must establish which practices worked, under what hydrologic and resource conditions, and whether affected people consent and have capacity to participate here. Repeated exposure does not imply that any community can absorb more risk or that a local practice transfers unchanged.
+
 ## Step 5 — Gradients
 
 The prompt collapses flow rate, duration, timing, extent, depth, warning interval, evacuation uptake, and recoverability into two outcomes. Measurements may reveal intermediate release strategies or partial impacts, or may show that none is practicable. The required evidence is hydraulic, temporal, exposure, and response information, not an assumption that either side can absorb a specified burden.

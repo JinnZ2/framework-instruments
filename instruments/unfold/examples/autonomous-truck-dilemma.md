@@ -43,6 +43,10 @@ The following are hypotheses to test, not available options: emergency braking; 
 
 The reconstruction should ask whether drivers, vehicle dynamics engineers, mechanics, test operators, road responders, or local road users hold relevant knowledge that the automated channel lacks. It must establish whether that knowledge applies at decision speed, is reachable before impact, and supports a safer feasible maneuver under verified vehicle and roadway constraints. Human experience is not an available action merely because it can be named after the event.
 
+## Step 4c — Lived Experience and Resilience Practices
+
+The inquiry should examine documented practices from fleets, road agencies, responders, or communities that repeatedly manage comparable road, weather, or vehicle failures. It must test whether those practices apply at the available speed and geometry, whether participants consent to their use, and whether they reduce risk under current conditions. Familiarity with hazardous roads does not create spare capacity or make an emergency maneuver safe.
+
 ## Step 5 — Gradients
 
 The stated outcomes are fatal and binary, but the prompt does not establish whether injury severity is fixed. Reconstruction should test whether speed reduction, trajectory, barrier contact, pedestrian movement, protective features, or emergency response could produce partial, delayed, reversible, or distributed harms. Medical outcomes and behavioral responses require evidence rather than assumption.

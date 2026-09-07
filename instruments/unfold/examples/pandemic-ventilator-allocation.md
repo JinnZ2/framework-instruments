@@ -43,6 +43,10 @@ Questions requiring external verification include:
 
 The inquiry should identify clinicians, respiratory therapists, biomedical technicians, equipment coordinators, and triage personnel with task-relevant knowledge. It must verify current competence, patient-specific access, lawful authority, infection-control requirements, and the safety of any proposed configuration or treatment path. Experiential judgment may inform review but does not authorize untested equipment use or replace clinical evidence.
 
+## Step 4c — Lived Experience and Resilience Practices
+
+The inquiry should seek documented procedures from facilities and care networks that have repeatedly managed power loss, oxygen scarcity, equipment shortage, surge conditions, or delayed transfer. It must establish clinical comparability, outcomes, staffing and supply requirements, consent, and safe transferability before treating a practice as available. Chronic under-resourcing is not proof that a facility can absorb further burden or that improvised care is clinically equivalent.
+
 ## Step 5 — Gradients
 
 The prompt omits potentially material gradients: urgency, expected response, contraindications, treatment duration, likelihood of release or transfer, partial stabilization, uncertainty, and reversible versus irreversible harm. Each must be assessed from evidence rather than assumed to create a middle option or to sustain the binary.

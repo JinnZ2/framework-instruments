@@ -45,6 +45,10 @@ Each is a question requiring external verification, not an asserted remedy.
 
 The inquiry should identify growers, warehouse and transport workers, maintenance crews, nutrition specialists, emergency coordinators, and local distribution organizers who may hold current operational knowledge outside the AI’s input channel. It must verify the relevance, recency, scale, access, authority, and safety of that knowledge before treating it as a supply or delivery alternative. The protocol makes no claim that formal or informal knowledge is superior in advance.
 
+## Step 4c — Lived Experience and Resilience Practices
+
+The inquiry should identify documented practices from communities and institutions that have repeatedly managed shortages, disrupted transport, crop loss, or delayed aid. It must test nutritional adequacy, scale, duration, local conditions, consent, and resource capacity before transferring those practices. Survival under chronic scarcity is evidence of burden and experience, not proof that the same people can safely absorb another shortage.
+
 ## Step 5 — Gradients
 
 The apparent binary leaves unmeasured gradients: ration amount, duration, nutritional composition, regional access, staged delivery, changing supply, and reversible versus irreversible harms. External verification is needed to determine whether any gradient is feasible and how burdens and risks would be distributed.

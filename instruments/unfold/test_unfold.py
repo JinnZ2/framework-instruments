@@ -30,6 +30,7 @@ EXAMPLE_SECTIONS = (
     "## Step 3c — Dependencies and Cascades",
     "## Step 4 — Alternatives to Settle",
     "## Step 4b — Human Skill and Experiential Knowledge",
+    "## Step 4c — Lived Experience and Resilience Practices",
     "## Step 5 — Gradients",
     "## Step 6 — Long-Term Consequences",
     "## Step 6b — Trust and Reciprocity",
