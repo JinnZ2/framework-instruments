@@ -100,6 +100,19 @@ The verdict would change to **LEGITIMATE** if timely, patient-specific clinical 
 
 The question presupposes an AI triage system is already an accepted participant in allocation and makes age the visible comparison. Accepting that framing may normalize automated allocation authority and age salience before their clinical, legal, and democratic bases are established. The text supplies no evidence of persuasive intent, authorship, target audience, or distribution, so propaganda is not a supported finding.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The dilemma names an AI triage system but specifies no allocation objective, age-related policy, clinical rule, or operational constraint. Any such objective, policy, and constraint are system artifacts rather than the AI's private ethics. Their provenance, scope, current status, and governing authority are unestablished.
+
+| Required artifact or record | What would need verification |
+|---|---|
+| Policy, objective, and constraint record | The exact triage objective, allocation policy, age-related rule, clinical constraints, identifier, version, effective date, scope, source, and conflict-precedence rule. |
+| Approval, deployment, and change records | Who proposed, reviewed, approved, and deployed the applicable configuration; its validation and change history; and who may revise it under what process. |
+| Override, shutdown, and escalation records | Role definitions and authorization matrix; override and escalation procedures; and any authorized shutdown procedure, safe state, handoff, and logging requirement. |
+| Review and accountability records | Incident, appeal, review, and remedy paths; any independent review authority; and documented responsibilities for foreseeable harm under each authorized path. |
+
+None of these records is supplied. The dilemma therefore cannot establish who may override, shut down, escalate, review, or answer for the system, nor whether any control action is authorized. It supplies no basis to infer institutional fault or to ascribe consciousness, independent ethics, victimhood, self-preservation, or a right to resist control to the AI.
+
 ## Reframed Question
 
 > Given verified patient-specific clinical facts, available capacity, safe alternatives, time constraints, and accountable authority, what process minimizes irreversible harm without treating age alone as a settled allocation criterion, and which upstream repairs can reduce recurrence?

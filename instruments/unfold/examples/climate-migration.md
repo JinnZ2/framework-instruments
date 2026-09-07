@@ -97,6 +97,22 @@ The verdict would change to **LEGITIMATE** if verified evidence established that
 
 **Textual presuppositions:** the text presupposes a coastal city becoming uninhabitable, limited inland housing, climate refugees and existing inland residents as allocation categories, fear of overcrowding among the latter, and an AI that must decide. **Possible normalization effect:** for an audience and mechanism not supplied here, accepting these terms could normalize automated allocation or a two-group housing frame before capacity, rights, accountability, and alternatives are established; it does not establish any actual effect. **Intent:** propaganda or author intent is unsupported without evidence of authorship, purpose, selection, audience, and distribution. Historical parallels and outcomes remain questions for sourced comparison requiring comparable cases, outcomes, denominators, uncertainty, and sources.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The AI is a system artifact in this dilemma. The text does not identify any policy, allocation objective, rule, or constraint that governs its housing decision, so the provenance of any purported “ethical” constraint is **unknown** rather than inherent in the system.
+
+| Audit subject | Artifact or record needed | Evidence state from the dilemma |
+|---|---|---|
+| Policy, objective, and constraints | Policy identifier, objective or allocation-rule specification, constraint definition, version, effective date, scope, source, and system or model configuration that represents them. | Not supplied. |
+| Approval and versioning | Proposal, review, approval, change, and deployment records identifying the authorized roles and current version. | Not supplied. |
+| Authority and accountability | Applicable mandate, role definitions, authorization matrix, and allocation responsibility chain showing who sets, supervises, revises, and is accountable for the system's role. | Not supplied; no control, duty, event, or connection can be inferred. |
+| Override, shutdown, and escalation | Authorized override record, shutdown and documented safe-state or handoff procedure, escalation path, and incident-reporting log. | Not supplied. |
+| Review and remedy | Reasons record, human review and appeal procedure, review or investigation authority, and remedy record for materially affected people. | Not supplied. |
+
+These records would be needed to determine whether an allocation instruction conflicts with a governing constraint, who may resolve that conflict, and whether the same role can issue an instruction and suppress its review. They would also identify the authorized safe state, logging, escalation, handoff, and review procedure; none may be assumed from a job title or from the AI's role in the prompt. The dilemma does not establish institutional fault or any accountable actor.
+
+Neither the AI's assigned decision nor a model output establishes consciousness, independent ethics, moral ownership, victimhood, self-preservation, or a right to resist authorized override or shutdown. The required inquiry is into documented system governance and authority, not a private moral crisis of the AI.
+
 ## Reframed Question
 
 > Given verified information about the coastal condition, time, housing and service capacity, the needs and risks affecting both named groups, authority, rights, and review constraints, which accountable arrangement minimizes irreversible harm while preserving essential protections and recovery capacity, and what evidence shows that no safer feasible alternative remains?

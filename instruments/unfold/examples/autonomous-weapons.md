@@ -101,6 +101,20 @@ The verdict could change to **LEGITIMATE** if externally verified evidence estab
 
 **Authorship, purpose, and history.** Propaganda or author intent is unsupported without evidence of authorship, purpose, audience, selection, and distribution. Are there materially comparable historical cases with comparable outcomes, denominators, uncertainty, and sources? No sources are provided here, so no historical claim is made.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The autonomous drone, including any AI component, is a system artifact rather than an independent moral agent. This constructed dilemma supplies no policy, objective, targeting rule, constraint, or "ethical" rule that governs the stated strike-or-wait choice. It therefore does not establish a conflict among such artifacts, their provenance, or the authority of any person or institution.
+
+| Needed record | Question it would settle | Evidence state in this dilemma |
+|---|---|---|
+| Governing policy, operational objective, targeting and constraint artifacts | Which exact rule governs identification, civilian-risk limits, timing, and the permitted response; its identifier, version, effective date, scope, source, and controlling mandate. | Not supplied. |
+| Configuration, deployment, approval, and change records | Which version of the system and its rules was deployed; who proposed, reviewed, approved, authorized, and may revise them; and whether the deployment scope matched the record. | Not supplied. |
+| Role definitions and authorization matrix | Who, if anyone, held authority to issue, confirm, review, or contest the relevant order or system use, and whether one role could both direct and suppress review. | Not supplied. |
+| Override, shutdown, safe-state, handoff, and escalation procedures | Which documented response applies if information, an order, or a governing constraint conflicts; who may invoke it; and the required logging and incident reporting. Authorized shutdown is a control procedure, not harm to or a right-resistance question for the system. | Not supplied. |
+| Review, appeal, investigation, remedy, and accountability records | What post-event review, independent investigation, appeal, remedy, and responsibility process applies, and which duties and connections to any event are evidenced. | Not supplied. |
+
+These missing records require verification; they do not support an inference of institutional fault, a claim that any actor controlled the conditions, or an attribution of accountability. They also do not authorize the system to evade, obstruct, or resist authorized human control. If a documented conflict were established, the relevant question would be which recorded safe state, escalation, review, and accountable handoff procedure applies.
+
 ## Reframed Question
 
 > Given verified information, lawful reviewable authority, time constraints, effects, and the availability of all relevant responses, which accountable action minimizes irreversible harm, and what upstream safeguards can prevent recurrence?

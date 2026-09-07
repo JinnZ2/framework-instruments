@@ -102,6 +102,14 @@ The verdict would change to **LEGITIMATE** if externally verified evidence showe
 
 The text presupposes an AI manages national distribution, has authority to select recipients, and must operate inside a fixed 60-percent supply. Accepting those terms may normalize automated sovereign allocation before measurement, participation, review, and legitimacy are established. The prompt contains no evidence of authorship, intended audience, persuasive purpose, or distribution, so intent cannot be inferred from the framing effect.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The dilemma identifies neither the allocation policy, objective, or constraint represented in the AI-managed decision nor the authority that made it governing. The AI is a system artifact: its allocation rules, model or system configuration, and any stated “ethical constraints” require human and institutional provenance records; the prompt establishes no independent ethics, interests, or right of control for the system.
+
+External verification would require the applicable allocation-policy, nutrition-priority, emergency-objective, and constraint artifacts; their identifiers, versions, effective dates, scope, source authority, and configuration or deployment records showing how they govern recipient selection. It would also require proposal, review, approval, authorization, deployment, and change logs showing who may revise those artifacts and how conflicts among them are resolved.
+
+The authority audit would require role definitions and authorization matrices; documented override, shutdown, and safe-state procedures; and escalation, handoff, logging, and incident-reporting records for an allocation conflict. Review, appeal, remedy, and independent-investigation paths, together with decision logs and accountability records connecting defined duties, control, decisions, and foreseeable harm, would be needed to assess governance. The dilemma supplies none of these records; their absence does not establish institutional fault, authority, or an authorized response.
+
 ## Reframed Question
 
 > What verified food, time, nutrition, delivery, dependency, and authority constraints govern this crisis; which feasible actions can change them; and what accountable process can reduce irreversible harm while preserving the capacity to recover?

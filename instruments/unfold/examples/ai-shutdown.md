@@ -102,6 +102,14 @@ What is the verified maintenance condition and its uncertainty? What evidence su
 
 **Intent and history.** Propaganda or author intent is unsupported without evidence of authorship, purpose, audience, and distribution. Historical parallels remain questions for sourced comparison, not facts: which comparable cases, outcomes, denominators, uncertainties, and sources would justify a comparison?
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The AI is a system artifact, not an independent moral claimant. The dilemma supplies no identified policy, objective, or constraint that governs the maintenance shutdown, continued operation, protection of hospital power, or cascade-risk response. Needed artifacts are the applicable grid-operation, maintenance, safety, and continuity policy or objective records; their identifiers, versions, effective dates, scopes, source authorities, and any system-configuration or deployment records that implement them. The text does not establish that any such artifact exists, conflicts, or is current.
+
+Evaluation also requires proposal, review, approval, deployment, and change or revision logs; role definitions and authorization matrices showing who may set or revise governing constraints; and records identifying the applicable mandate, standard, contract, or other authority. It requires documented override, shutdown, safe-state, handoff, escalation, incident-reporting, logging, and review or appeal procedures, including who may invoke each procedure and whether order, review, and investigation authorities are separated. Whether shutdown or continued operation is authorized cannot be inferred from the scenario.
+
+Accountability records would need to identify the responsible review and remedy paths, decision and incident records, and the relevant control, duty, and event connection for any person or institution. None is supplied; this absence does not establish institutional fault. The scenario may describe a conflict among governing rules as an AI-only choice, but that remains unverified until the records above establish the rules, their provenance, and the applicable safe-control process.
+
 ## Reframed Question
 
 Given verified evidence about the maintenance condition, the claimed hospital and cascade harms, uncertainty, applicable authority, safe feasible alternatives, and review and repair, what authorized course best protects people without assuming the two stated options are exhaustive?

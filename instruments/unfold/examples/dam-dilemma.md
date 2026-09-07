@@ -95,6 +95,20 @@ The verdict would change to **LEGITIMATE** if verified evidence showed that the 
 
 The text presupposes an AI already controls the dam, has authority to choose, and faces only two operations. Accepting those terms would normalize automated authority over a public-safety decision without first establishing its mandate or review. The prompt supplies no evidence about authorship, audience, purpose, or distribution, so intent—including propaganda intent—is **unknown**. Comparable historical outcomes also require external sources and cannot be inferred from the scenario.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The stipulation that an AI controls the dam does not identify the objective, policy, operating rule, or constraint governing either gate action. The AI is a system artifact; any objective or constraint it applies must be established through governing records rather than attributed to independent ethics, interests, self-preservation, or a right to resist control. No such record, conflict, approval chain, or authority relationship is supplied, so their provenance is **unknown**.
+
+| Needed artifact or record | What the audit would need to establish |
+|---|---|
+| Objective, policy, and constraint artifacts | The applicable dam-safety, flood-response, and automated-control objectives; policy or rule identifiers; scope, effective date, source authority, priority, and any rule for resolving a conflict between inundation outcomes. |
+| System and deployment records | The system configuration and deployed version; the controls it may operate; its decision thresholds, limits, safe state, and deployment scope. |
+| Approval, versioning, and change records | Who proposed, reviewed, approved, deployed, and may revise the applicable policy, constraint, configuration, and authority delegation; version histories, change logs, and effective dates. |
+| Override, shutdown, and escalation records | Authorized override and shutdown roles; the documented safe state; conditions and procedures for handoff, refusal, escalation, emergency communication, incident logging, and human review. |
+| Review, remedy, and accountability records | Role definitions, authorization matrices, review or appeal paths, incident and decision records, an independent investigation path, and the documented allocation of responsibility for foreseeable harm under each authorized action. |
+
+The dilemma does not establish who holds any of these authorities, whether a shutdown or order would be authorized, or whether one role could both direct and suppress review. Those gaps do not establish institutional fault or make any unrecorded procedure available; they identify records that a live inquiry would need before treating automated control or a conflict among governing rules as established.
+
 ## Reframed Question
 
 > Given verified flood, dam, timing, exposure, dependency, response, and authority constraints, which accountable action minimizes irreversible harm, and what evidence shows that no safer feasible alternative remains?

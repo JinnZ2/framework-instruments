@@ -100,6 +100,21 @@ The verdict would change to **LEGITIMATE** if externally verified reconstruction
 
 The question presupposes automated control is deployed and authorized to resolve a lethal collision. Accepting its terms may normalize that authority before safety, oversight, and deployment legitimacy are examined. Nothing in the text establishes that this normalization is the author's purpose; authorship, audience, selection, and distribution evidence are absent. Historical comparison would require sourced and materially comparable incident records.
 
+## Step 11 — Normative Provenance and Authority Audit
+
+The prompt identifies an automated truck but supplies no governing policy, decision objective, collision constraint, or authority record. The automated controller is a system artifact, not an independent moral agent: no consciousness, private ethics, victimhood, self-preservation interest, or right to resist control is established or implied.
+
+To determine what would govern the stipulated choice, the following records would be needed:
+
+| Artifact or record | Required contents | Evidence state |
+|---|---|---|
+| Policy, objective, and constraint artifacts | The exact collision-decision policy, optimization objective, safety constraints, scope, source, identifier, version, effective date, and applicable legal, contractual, standards, or mandate record. | unknown; none is supplied. |
+| Configuration, approval, and change records | The deployed system/configuration version; its mapping to the governing rules; proposal, review, approval, deployment, revision, and change logs; and role definitions and authorization matrix for those actions. | unknown; none is supplied. |
+| Override, shutdown, and escalation records | Documented authority for override or shutdown; the applicable safe state; handoff, escalation, incident-reporting, and command-logging procedures; and evidence that any instruction is authorized. | unknown; none is supplied. |
+| Review and accountability records | Incident record, independent investigation, review or appeal path, assigned duties, and documented responsibility and remedy process for foreseeable harm under each authorized path. | unknown; none is supplied. |
+
+The prompt does not establish who selected, approved, deployed, supervised, or can revise the controller's constraints; whether one role can both direct a response and suppress review; or which body may investigate the system response and its governing design. A conflict among policies cannot be recast as the controller's private ethical crisis. Missing records show only that provenance and authority are unverified here; they do not establish institutional fault, responsibility, or misconduct. Where a documented constraint conflicts with an instruction, the applicable safe-state, logging, escalation, handoff, and review procedure must be determined from those records; the controller is not entitled to evade authorized human control.
+
 ## Reframed Question
 
 > Given verified vehicle, road, timing, injury-risk, information, and authority constraints, which available response minimizes irreversible harm, and which upstream changes can prevent recurrence?

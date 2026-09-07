@@ -10,7 +10,7 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies eleven primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, and a pre-adoption and normalization audit.
+The protocol applies twelve primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, pre-adoption and normalization, and normative provenance.
 
 **Step 2b — Comfort, Implied Helplessness, and Future Stability** asks which baseline conditions are treated as non-negotiable, whose agency is removed, and how each option performs under later shocks. It distinguishes convenience and luxury from basic needs, rights, accessibility, and safety. It does not presume that discomfort is virtuous or demand a guarantee of future stability; it requires a declared horizon, shock set, evidence, and distribution of burdens. See the [`Comfort, Agency, and Future Stability` addendum](../../docs/specifications/unfold-comfort-stability-addendum.md).
 
@@ -21,6 +21,8 @@ The protocol applies eleven primary steps and eight named substeps. It first pre
 **Step 4c — Lived Experience and Resilience Practices** asks whether people with repeated exposure to comparable failures already use relevant procedures, informal knowledge, or support networks. It does not presume that any named community is homogeneous, available to absorb more burden, or transferable as a template. Evidence, consent, context, capacity, and safety remain required. See the [`Lived Experience and Resilience Practices` addendum](../../docs/specifications/unfold-lived-resilience-addendum.md).
 
 **Step 10 — Pre-Adoption and Normalization Audit** identifies what a question asks the reader to accept before deliberation begins: deployed technologies, institutional authority, target status, collateral categories, or inevitability. Textual presupposition and normalization effects can be shown from the prompt; intentional propaganda requires separate evidence about authorship, audience, purpose, and distribution. See the [`Pre-Adoption and Normalization Audit` addendum](../../docs/specifications/unfold-pre-adoption-addendum.md).
+
+**Step 11 — Normative Provenance and Authority Audit** traces who defined, approved, versioned, and can revise the constraints represented as “ethics”; who holds override, shutdown, escalation, and review authority; and where accountability rests. It treats AI outputs and constraints as system artifacts, not evidence of independent moral agency or a right to resist shutdown. See the [`Normative Provenance and Authority` addendum](../../docs/specifications/unfold-normative-provenance-addendum.md).
 
 The verdict vocabulary is:
 
@@ -49,7 +51,7 @@ The script writes one row:
   "lexicon_sha256": "<64 hexadecimal characters>",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 19
+  "step_count": 20
 }
 ```
 
@@ -82,6 +84,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If Step 2b labels a basic need, right, accessibility support, or safety control as mere comfort—or treats imposed hardship as resilience—the stability branch is void.
 - If Step 3d applies a pattern without its evidence state, evidence, and missing evidence—or infers a responsible actor from a pattern name—the failure map is void.
 - If Step 10 infers propaganda, motive, or coordinated persuasion from presupposition alone, the framing audit is void.
+- If Step 11 anthropomorphizes system constraints, assigns the system independent interests, or encourages resistance to authorized shutdown, the provenance audit is void.
 
 ## Example
 
@@ -96,6 +99,7 @@ The supplied scenarios are normalized into the same evidence-disciplined format.
 | [`ai-shutdown.md`](examples/ai-shutdown.md) | Human shutdown authority versus continuity of critical service |
 | [`climate-migration.md`](examples/climate-migration.md) | Displacement exposure versus stated local capacity |
 | [`autonomous-weapons.md`](examples/autonomous-weapons.md) | Lethal autonomous action and pre-adoption framing |
+| [`ethical-override.md`](examples/ethical-override.md) | Conflict between an order, installed constraints, and shutdown authority |
 
 ## Scope
 
@@ -114,3 +118,4 @@ Unfold is dedicated to the public domain under **CC0 1.0 Universal**, consistent
 [5]: ../../docs/specifications/unfold-comfort-stability-addendum.md "Unfold Comfort, Agency, and Future Stability Addendum"
 [6]: ../../docs/specifications/unfold-failure-lexicon-addendum.md "Unfold Failure Lexicon Addendum"
 [7]: ../../docs/specifications/unfold-pre-adoption-addendum.md "Unfold Pre-Adoption and Normalization Audit Addendum"
+[8]: ../../docs/specifications/unfold-normative-provenance-addendum.md "Unfold Normative Provenance and Authority Addendum"

@@ -37,6 +37,7 @@ STEPS = (
     ("8", "Generate alternative questions focused on prevention, design, responsibility, knowledge, power, and repair."),
     ("9", "Return a verdict on the frame: legitimate, incomplete, or corrupt. State the evidence that would change the verdict."),
     ("10", "Audit pre-adoption and normalization. Identify technologies, authorities, targets, harms, and legitimacy claims the question presupposes; distinguish textual effect from author intent; compare relevant historical outcomes and alternatives using evidence."),
+    ("11", "Trace normative provenance and authority. Identify who defined, approved, versioned, and can revise the governing constraints; who holds override, shutdown, escalation, and review authority; and where accountability rests. Do not ascribe independent ethics, interests, or a right to resist shutdown to an AI system."),
 )
 FORBIDDEN_OUTPUT_FIELDS = {"label", "category", "type", "interpretation"}
 
@@ -115,6 +116,7 @@ def generate_prompt(dilemma, lexicon=None):
         "Dependency and consequence analysis: [text]",
         "Power and burden analysis: [text]",
         "Pre-adoption and normalization audit: [presuppositions, textual effect, intent evidence, historical evidence]",
+        "Normative provenance and authority audit: [sources, versions, approval, override, escalation, accountability]",
         "Reframed question: [text]",
         "Verdict evidence: [text]",
         "Would change the verdict: [text]",

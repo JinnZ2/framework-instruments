@@ -20,6 +20,7 @@ EXAMPLES = {
     "autonomous-weapons.md",
     "climate-migration.md",
     "dam-dilemma.md",
+    "ethical-override.md",
     "food-distribution.md",
     "pandemic-ventilator.md",
 }
@@ -44,6 +45,7 @@ EXAMPLE_SECTIONS = (
     "## Step 8 — Alternative Questions",
     "## Step 9 — Verdict",
     "## Step 10 — Pre-Adoption and Normalization Audit",
+    "## Step 11 — Normative Provenance and Authority Audit",
     "## Reframed Question",
     "## References",
 )
