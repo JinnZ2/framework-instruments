@@ -28,6 +28,7 @@ detail lives in each instrument's `README.md`, the specifications under
 | `instruments/test_status_paths.py` | Every script's `empty` and `error` paths through the run record. |
 | `arena/` | Specimens of defects that pass every normal signal; `path_probe.py` disables one claimed branch and re-runs the claiming test; `report.py` puts the false-green count before any aggregate. |
 | `docs/specifications/` | Source specifications, delivered verbatim, never edited by an audit. |
+| `docs/reviews/` | Audits of external reviews of this repository. A review is not landed if it characterises anyone; its hash and every number it states are recorded in a `check_report.py` that recomputes them. |
 
 ## Conventions that hold everywhere
 

@@ -20,7 +20,11 @@ stratum is per D. The cost: on the permuted file ent_i is no longer constant
 across D for one position. That file is a null, not a claim.
 
 A stratum with one position cannot be permuted and stays as it is; the count
-of such strata is in the run record.
+of such strata is in the run record. If EVERY stratum has one position the
+permutation is the identity and the "null" is the real file under another
+name: the run is refused (status void, nothing written), so the report
+downstream goes void instead of printing a real-vs-permuted comparison of a
+file against itself.
 """
 
 import os
@@ -70,9 +74,11 @@ def permute(in_path, seed, out_path):
     rows = [r for _, r in runrecord.read_jsonl(in_path, "separations.jsonl")]
     out, single = permute_rows(rows, seed)
     check_multiset(rows, out)
+    strata = len({(r["case_id"], r["model_id"], r["branch_rank"], r["D"]) for r in rows})
+    counts = {"rows": len(out), "strata": strata, "single_position_strata": single}
+    if rows and single == strata:
+        return "void", counts, "every stratum holds one position: the permutation is the identity; no null written"
     runrecord.write_jsonl(out_path, out)
-    counts = {"rows": len(out), "strata": len({(r["case_id"], r["model_id"], r["branch_rank"], r["D"]) for r in rows}),
-              "single_position_strata": single}
     return ("ok" if out else "empty"), counts, ""
 
 

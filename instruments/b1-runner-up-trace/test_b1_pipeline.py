@@ -122,6 +122,17 @@ class TestB1Pipeline(unittest.TestCase):
         self.assertEqual((last["script"], last["status"]), ("b1_report.py", "void"))
         self.assertIsNone(last["input_files"][1]["sha256"])
 
+    def test_identity_permutation_is_void(self):
+        """One position per stratum: nothing can move, so the null is refused, not written."""
+        base, traces = fixture(n_positions=1, separating=(0,))
+        runrecord.write_jsonl("base.jsonl", base)
+        runrecord.write_jsonl("traces.jsonl", traces)
+        score.main(["b1_score.py", "base.jsonl", "traces.jsonl", "sep.jsonl"])
+        self.assertEqual(permute.main(["b1_permute.py", "sep.jsonl", "5", "sep_perm.jsonl"]), 2)
+        last = [r for _, r in runrecord.read_jsonl("runs.jsonl")][-1]
+        self.assertEqual((last["status"], last["counts"]["single_position_strata"]), ("void", last["counts"]["strata"]))
+        self.assertFalse(os.path.exists("sep_perm.jsonl"))
+
     def test_empty_input_is_recorded_empty(self):
         runrecord.write_jsonl("sep.jsonl", [])
         self.assertEqual(summarise.main(["b1_summarise.py", "sep.jsonl", "summary.jsonl"]), 0)

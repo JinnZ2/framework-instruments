@@ -40,7 +40,10 @@ div_D)` tuple, independently inside each `(case_id, model_id, branch_rank, D)`
 stratum. Per-group means and rates are unchanged by construction; what the
 null removes is the cross-D coherence of position sets. A global relabelling
 of `i` would leave every summary identical and the null could never fire —
-that was the shipped behaviour (arena specimen SPEC-005). The permuted result
+that was the shipped behaviour (arena specimen SPEC-005). If every stratum
+holds one position the permutation is the identity and `b1_permute.py`
+refuses with status `void`, so a two-case run cannot print a real-vs-permuted
+table of a file against itself (`docs/reviews/`, KR_008). The permuted result
 is a second output, never a gate.
 
 ## Nulls in section 6 of the report

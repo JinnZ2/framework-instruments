@@ -22,4 +22,7 @@ run_suite arena test_arena
 # Coverage as counted (script, status) pairs; the count is printed, never stored.
 ( cd "$(mktemp -d)" && python3 "$repo_root/instruments/coverage_pairs.py" "$repo_root/instruments" coverage.jsonl )
 
+# External review checks: recomputes what the 2026-09-07 report states (git + instruments, no network).
+( cd "$(mktemp -d)" && python3 "$repo_root/docs/reviews/2026-09-07-kimi-deep-research/check_report.py" checks.jsonl )
+
 echo "All framework-instrument tests passed."

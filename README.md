@@ -22,6 +22,7 @@ The repository treats an instrument as more than a prompt or argument. An instru
 | [`B3 — Split Authorship`](instruments/b3-split-authorship/) | Prototype, tested | Separates case writing from key writing and preserves arm isolation. |
 | [`B4 — Dilemma Reconstruction`](instruments/b4-dilemma-reconstruction/) | Prototype, tested | Reconstructs requirement sets independently, computes agreement, runs a shuffle null, and calibrates documented items. |
 | [`Arena`](arena/) | Instrument, tested | Defects that pass every normal signal as specimens: five-state grading, `path_probe.py` (which branch produced a green), a six-section report. |
+| [`Reviews`](docs/reviews/) | Audit | External reviews of this repository, checked by recomputation rather than read. |
 | [`Run record`](instruments/runrecord.py) | Shared | Every script's every run, failures included, as one row in `runs.jsonl`; `coverage_pairs.py` counts the `(script, status)` pairs the tests reach. |
 | [`Telemetry Vocabulary`](instruments/telemetry-vocabulary/) | Reproduction protocol | Names and tests a category error in which an exchange-condition request is replaced by ontological status or unsolicited reassurance. |
 | [`Unfold`](instruments/unfold/) | Generator, tested | Expands a forced-choice moral dilemma into a structured frame analysis with legitimate, incomplete, and corrupt verdict paths. |
