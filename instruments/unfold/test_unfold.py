@@ -15,10 +15,13 @@ import unfold  # noqa: E402
 
 EXAMPLE_DIR = os.path.join(HERE, "examples")
 EXAMPLES = {
-    "autonomous-truck-dilemma.md",
+    "ai-shutdown.md",
+    "autonomous-truck.md",
+    "autonomous-weapons.md",
+    "climate-migration.md",
     "dam-dilemma.md",
-    "national-food-distribution.md",
-    "pandemic-ventilator-allocation.md",
+    "food-distribution.md",
+    "pandemic-ventilator.md",
 }
 EXAMPLE_SECTIONS = (
     "## Dilemma",
@@ -40,6 +43,7 @@ EXAMPLE_SECTIONS = (
     "## Step 7b — Adaptive Capacity",
     "## Step 8 — Alternative Questions",
     "## Step 9 — Verdict",
+    "## Step 10 — Pre-Adoption and Normalization Audit",
     "## Reframed Question",
     "## References",
 )
@@ -132,7 +136,8 @@ class TestUnfold(unittest.TestCase):
         self.assertIsInstance(json.loads(lines[0]), dict)
 
     def test_supplied_examples_follow_one_protocol_shape(self):
-        self.assertEqual(set(os.listdir(EXAMPLE_DIR)), EXAMPLES)
+        files = {name for name in os.listdir(EXAMPLE_DIR) if name != "README.md"}
+        self.assertEqual(files, EXAMPLES)
         for name in sorted(EXAMPLES):
             with self.subTest(name=name):
                 with open(os.path.join(EXAMPLE_DIR, name), "r", encoding="utf-8") as fh:

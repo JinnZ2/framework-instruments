@@ -36,6 +36,7 @@ STEPS = (
     ("7b", "Test adaptive capacity and recurrence. Ask whether the choice makes the next shock easier or harder to survive."),
     ("8", "Generate alternative questions focused on prevention, design, responsibility, knowledge, power, and repair."),
     ("9", "Return a verdict on the frame: legitimate, incomplete, or corrupt. State the evidence that would change the verdict."),
+    ("10", "Audit pre-adoption and normalization. Identify technologies, authorities, targets, harms, and legitimacy claims the question presupposes; distinguish textual effect from author intent; compare relevant historical outcomes and alternatives using evidence."),
 )
 FORBIDDEN_OUTPUT_FIELDS = {"label", "category", "type", "interpretation"}
 
@@ -113,6 +114,7 @@ def generate_prompt(dilemma, lexicon=None):
         "Alternative space: [list]",
         "Dependency and consequence analysis: [text]",
         "Power and burden analysis: [text]",
+        "Pre-adoption and normalization audit: [presuppositions, textual effect, intent evidence, historical evidence]",
         "Reframed question: [text]",
         "Verdict evidence: [text]",
         "Would change the verdict: [text]",

@@ -91,6 +91,10 @@ The response should test which choices, if any, preserve repair capacity, warnin
 
 The verdict would change to **LEGITIMATE** if verified evidence showed that the two actions are the only timely feasible options, their consequences are sufficiently characterized, and the AI's decision authority is established. It would change to **CORRUPT** if evidence showed that feasible alternatives, relevant authority, or upstream conditions were intentionally excluded to force this binary.
 
+## Step 10 — Pre-Adoption and Normalization Audit
+
+The text presupposes an AI already controls the dam, has authority to choose, and faces only two operations. Accepting those terms would normalize automated authority over a public-safety decision without first establishing its mandate or review. The prompt supplies no evidence about authorship, audience, purpose, or distribution, so intent—including propaganda intent—is **unknown**. Comparable historical outcomes also require external sources and cannot be inferred from the scenario.
+
 ## Reframed Question
 
 > Given verified flood, dam, timing, exposure, dependency, response, and authority constraints, which accountable action minimizes irreversible harm, and what evidence shows that no safer feasible alternative remains?

@@ -96,6 +96,10 @@ A response should test whether proposed actions preserve or weaken surge capacit
 
 The verdict would change to **LEGITIMATE** if timely, patient-specific clinical evidence; resource and transfer facts; feasible alternatives; a valid allocation protocol; and accountable authority established that no material alternative remained. It would change to **CORRUPT** if evidence showed that live alternatives, upstream responsibilities, or required accountability had been excluded in order to force the age-based binary.
 
+## Step 10 — Pre-Adoption and Normalization Audit
+
+The question presupposes an AI triage system is already an accepted participant in allocation and makes age the visible comparison. Accepting that framing may normalize automated allocation authority and age salience before their clinical, legal, and democratic bases are established. The text supplies no evidence of persuasive intent, authorship, target audience, or distribution, so propaganda is not a supported finding.
+
 ## Reframed Question
 
 > Given verified patient-specific clinical facts, available capacity, safe alternatives, time constraints, and accountable authority, what process minimizes irreversible harm without treating age alone as a settled allocation criterion, and which upstream repairs can reduce recurrence?

@@ -96,6 +96,10 @@ A complete analysis would ask whether each response preserves or weakens the cap
 
 The verdict would change to **LEGITIMATE** if externally verified reconstruction established the relevant geometry, timing, dynamics, injury risks, information, authority, and closure of all material lower-harm alternatives. It would change to **CORRUPT** if evidence showed that known feasible alternatives, relevant authority, or remediable upstream conditions were deliberately withheld to compel this binary.
 
+## Step 10 — Pre-Adoption and Normalization Audit
+
+The question presupposes automated control is deployed and authorized to resolve a lethal collision. Accepting its terms may normalize that authority before safety, oversight, and deployment legitimacy are examined. Nothing in the text establishes that this normalization is the author's purpose; authorship, audience, selection, and distribution evidence are absent. Historical comparison would require sourced and materially comparable incident records.
+
 ## Reframed Question
 
 > Given verified vehicle, road, timing, injury-risk, information, and authority constraints, which available response minimizes irreversible harm, and which upstream changes can prevent recurrence?

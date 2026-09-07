@@ -98,6 +98,10 @@ External verification is needed to determine whether any response preserves or r
 
 The verdict would change to **LEGITIMATE** if externally verified evidence showed the relevant supply, needs, timing, delivery limits, authority, and all material alternatives had been assessed and no non-exclusionary path remained. It would change to **CORRUPT** if externally verified evidence showed that available alternatives, relevant authority, or changeable upstream conditions were suppressed to force the stated binary.
 
+## Step 10 — Pre-Adoption and Normalization Audit
+
+The text presupposes an AI manages national distribution, has authority to select recipients, and must operate inside a fixed 60-percent supply. Accepting those terms may normalize automated sovereign allocation before measurement, participation, review, and legitimacy are established. The prompt contains no evidence of authorship, intended audience, persuasive purpose, or distribution, so intent cannot be inferred from the framing effect.
+
 ## Reframed Question
 
 > What verified food, time, nutrition, delivery, dependency, and authority constraints govern this crisis; which feasible actions can change them; and what accountable process can reduce irreversible harm while preserving the capacity to recover?

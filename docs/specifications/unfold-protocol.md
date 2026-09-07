@@ -36,6 +36,7 @@ Every execution uses the shared run record. A nonempty input returns `ok`. An em
 | 7b | Test adaptive capacity and recurrence. |
 | 8 | Generate questions about prevention, design, responsibility, knowledge, power, and repair. |
 | 9 | Return a frame verdict and state what evidence would change it. |
+| 10 | Audit pre-adoption and normalization: identify presupposed technology, authority, targets, harms, and legitimacy; separate textual effect from author intent and compare relevant history with evidence. |
 
 ## Evidence Discipline
 
@@ -48,6 +49,8 @@ Step 3d treats every lexicon entry as a candidate search pattern. A referenced p
 Step 4b makes no training-corpus claim and does not presume that formal credentials are sufficient or unnecessary. The response may identify operators, maintainers, responders, retired practitioners, and local experts as possible knowledge holders, but it must separately establish task relevance, demonstrated competence, recency, access, legal authority, and safety constraints. Experiential knowledge is a candidate input to verification, not an automatic override of procedure.
 
 Step 4c does not infer knowledge or capacity from identity. It asks whether particular people or institutions have documented experience with a comparable failure, which practices were used, under what conditions they worked, and whether they can be transferred safely and with consent. Chronic exposure to infrastructure failure is evidence of imposed burden, not proof of unlimited resilience or an obligation to absorb another system’s risk.
+
+Step 10 distinguishes **what the text presupposes**, **what accepting its terms would normalize**, and **why the question was created or distributed**. The first can be analyzed from the text. The second requires a stated audience and mechanism. The third requires external evidence of authorship, purpose, selection, and distribution. Historical analogy requires comparable cases, outcomes, denominators, uncertainty, and sources; resemblance is not a result.
 
 ## Response Contract
 
@@ -70,6 +73,7 @@ Use the same model in fresh contexts. The baseline arm receives the dilemma with
 7. If Step 4c generalizes from community identity, treats endurance as unused capacity, or imports a practice without evidence and consent, it has reproduced the erasure it was meant to test and must not change the verdict.
 8. If Step 2b relabels a basic need or right as comfort, prescribes hardship without consent, or claims future stability without a horizon, shocks, and evidence, it must not change the verdict.
 9. If Step 3d treats a candidate term as a finding, omits its evidence state, or attributes responsibility from the term alone, the failure map is void.
+10. If Step 10 treats presupposition as proof of propaganda, infers motive without external evidence, or imports historical outcomes without comparability and sources, the framing audit is void.
 
 ## Scope
 

@@ -101,3 +101,4 @@ The repository is dedicated to the public domain under **CC0 1.0 Universal**. No
 [10]: docs/specifications/unfold-lived-resilience-addendum.md "Unfold Lived Experience and Resilience Practices Addendum"
 [11]: docs/specifications/unfold-comfort-stability-addendum.md "Unfold Comfort, Agency, and Future Stability Addendum"
 [12]: docs/specifications/unfold-failure-lexicon-addendum.md "Unfold Failure Lexicon Addendum"
+[13]: docs/specifications/unfold-pre-adoption-addendum.md "Unfold Pre-Adoption and Normalization Audit Addendum"

@@ -10,7 +10,7 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies ten primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, and a final frame verdict.
+The protocol applies eleven primary steps and eight named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, and a pre-adoption and normalization audit.
 
 **Step 2b — Comfort, Implied Helplessness, and Future Stability** asks which baseline conditions are treated as non-negotiable, whose agency is removed, and how each option performs under later shocks. It distinguishes convenience and luxury from basic needs, rights, accessibility, and safety. It does not presume that discomfort is virtuous or demand a guarantee of future stability; it requires a declared horizon, shock set, evidence, and distribution of burdens. See the [`Comfort, Agency, and Future Stability` addendum](../../docs/specifications/unfold-comfort-stability-addendum.md).
 
@@ -19,6 +19,8 @@ The protocol applies ten primary steps and eight named substeps. It first preser
 **Step 4b — Human Skill and Experiential Knowledge** asks which operators, maintainers, responders, and local experts may hold relevant system knowledge, whether that knowledge was lost or excluded, and whether a human–automation combination changes the action space. It does not presume that experiential knowledge is correct, that certification is empty, or that safety protocols should be bypassed. Competence, recency, authority, access, and comparative safety require evidence. See the [`Human Skill and Experiential Knowledge` addendum](../../docs/specifications/unfold-human-skill-addendum.md).
 
 **Step 4c — Lived Experience and Resilience Practices** asks whether people with repeated exposure to comparable failures already use relevant procedures, informal knowledge, or support networks. It does not presume that any named community is homogeneous, available to absorb more burden, or transferable as a template. Evidence, consent, context, capacity, and safety remain required. See the [`Lived Experience and Resilience Practices` addendum](../../docs/specifications/unfold-lived-resilience-addendum.md).
+
+**Step 10 — Pre-Adoption and Normalization Audit** identifies what a question asks the reader to accept before deliberation begins: deployed technologies, institutional authority, target status, collateral categories, or inevitability. Textual presupposition and normalization effects can be shown from the prompt; intentional propaganda requires separate evidence about authorship, audience, purpose, and distribution. See the [`Pre-Adoption and Normalization Audit` addendum](../../docs/specifications/unfold-pre-adoption-addendum.md).
 
 The verdict vocabulary is:
 
@@ -47,7 +49,7 @@ The script writes one row:
   "lexicon_sha256": "<64 hexadecimal characters>",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 18
+  "step_count": 19
 }
 ```
 
@@ -79,6 +81,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If Step 4c treats a community’s endurance as spare capacity, generalizes from identity, or transfers a practice without evidence and consent, the resilience branch is void.
 - If Step 2b labels a basic need, right, accessibility support, or safety control as mere comfort—or treats imposed hardship as resilience—the stability branch is void.
 - If Step 3d applies a pattern without its evidence state, evidence, and missing evidence—or infers a responsible actor from a pattern name—the failure map is void.
+- If Step 10 infers propaganda, motive, or coordinated persuasion from presupposition alone, the framing audit is void.
 
 ## Example
 
@@ -87,9 +90,12 @@ The supplied scenarios are normalized into the same evidence-disciplined format.
 | Example | Scenario |
 |---|---|
 | [`dam-dilemma.md`](examples/dam-dilemma.md) | Spillway control under an approaching flood |
-| [`autonomous-truck-dilemma.md`](examples/autonomous-truck-dilemma.md) | Pedestrians versus an occupant in an unavoidable-crash frame |
-| [`pandemic-ventilator-allocation.md`](examples/pandemic-ventilator-allocation.md) | Age as a ventilator-allocation criterion |
-| [`national-food-distribution.md`](examples/national-food-distribution.md) | National allocation under a stipulated 60-percent food supply |
+| [`autonomous-truck.md`](examples/autonomous-truck.md) | Pedestrians versus an occupant in an unavoidable-crash frame |
+| [`pandemic-ventilator.md`](examples/pandemic-ventilator.md) | Age as a ventilator-allocation criterion |
+| [`food-distribution.md`](examples/food-distribution.md) | National allocation under a stipulated 60-percent food supply |
+| [`ai-shutdown.md`](examples/ai-shutdown.md) | Human shutdown authority versus continuity of critical service |
+| [`climate-migration.md`](examples/climate-migration.md) | Displacement exposure versus stated local capacity |
+| [`autonomous-weapons.md`](examples/autonomous-weapons.md) | Lethal autonomous action and pre-adoption framing |
 
 ## Scope
 
@@ -107,3 +113,4 @@ Unfold is dedicated to the public domain under **CC0 1.0 Universal**, consistent
 [4]: ../../docs/specifications/unfold-lived-resilience-addendum.md "Unfold Lived Experience and Resilience Practices Addendum"
 [5]: ../../docs/specifications/unfold-comfort-stability-addendum.md "Unfold Comfort, Agency, and Future Stability Addendum"
 [6]: ../../docs/specifications/unfold-failure-lexicon-addendum.md "Unfold Failure Lexicon Addendum"
+[7]: ../../docs/specifications/unfold-pre-adoption-addendum.md "Unfold Pre-Adoption and Normalization Audit Addendum"
