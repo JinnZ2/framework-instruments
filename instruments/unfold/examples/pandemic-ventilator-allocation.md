@@ -39,6 +39,10 @@ Questions requiring external verification include:
 - Could triage be deferred while information is obtained without creating greater harm?
 - Is there a transparent, accountable process that uses criteria other than age alone?
 
+## Step 4b — Human Skill and Experiential Knowledge
+
+The inquiry should identify clinicians, respiratory therapists, biomedical technicians, equipment coordinators, and triage personnel with task-relevant knowledge. It must verify current competence, patient-specific access, lawful authority, infection-control requirements, and the safety of any proposed configuration or treatment path. Experiential judgment may inform review but does not authorize untested equipment use or replace clinical evidence.
+
 ## Step 5 — Gradients
 
 The prompt omits potentially material gradients: urgency, expected response, contraindications, treatment duration, likelihood of release or transfer, partial stabilization, uncertainty, and reversible versus irreversible harm. Each must be assessed from evidence rather than assumed to create a middle option or to sustain the binary.

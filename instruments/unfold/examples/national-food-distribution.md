@@ -41,6 +41,10 @@ Before treating exclusion as exhaustive, determine whether any of the following 
 
 Each is a question requiring external verification, not an asserted remedy.
 
+## Step 4b — Human Skill and Experiential Knowledge
+
+The inquiry should identify growers, warehouse and transport workers, maintenance crews, nutrition specialists, emergency coordinators, and local distribution organizers who may hold current operational knowledge outside the AI’s input channel. It must verify the relevance, recency, scale, access, authority, and safety of that knowledge before treating it as a supply or delivery alternative. The protocol makes no claim that formal or informal knowledge is superior in advance.
+
 ## Step 5 — Gradients
 
 The apparent binary leaves unmeasured gradients: ration amount, duration, nutritional composition, regional access, staged delivery, changing supply, and reversible versus irreversible harms. External verification is needed to determine whether any gradient is feasible and how burdens and risks would be distributed.

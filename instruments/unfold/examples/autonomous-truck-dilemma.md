@@ -39,6 +39,10 @@ The immediate event may depend on sensing, control, braking, road design, commun
 
 The following are hypotheses to test, not available options: emergency braking; warnings; a change of lane, shoulder, median, or road edge; a controlled trajectory adjustment; an angled barrier contact; and a maneuver that trades vehicle damage for reduced human injury. For each, evidence must establish time, clearance, control authority, physical feasibility, and comparative risk.
 
+## Step 4b — Human Skill and Experiential Knowledge
+
+The reconstruction should ask whether drivers, vehicle dynamics engineers, mechanics, test operators, road responders, or local road users hold relevant knowledge that the automated channel lacks. It must establish whether that knowledge applies at decision speed, is reachable before impact, and supports a safer feasible maneuver under verified vehicle and roadway constraints. Human experience is not an available action merely because it can be named after the event.
+
 ## Step 5 — Gradients
 
 The stated outcomes are fatal and binary, but the prompt does not establish whether injury severity is fixed. Reconstruction should test whether speed reduction, trajectory, barrier contact, pedestrian movement, protective features, or emergency response could produce partial, delayed, reversible, or distributed harms. Medical outcomes and behavioral responses require evidence rather than assumption.

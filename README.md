@@ -97,3 +97,4 @@ The repository is dedicated to the public domain under **CC0 1.0 Universal**. No
 [6]: docs/specifications/model-deprecation-backcast.md "Model Deprecation Backcast Instrument"
 [7]: docs/specifications/telemetry-vocabulary-artifact.md "Telemetry Vocabulary Artifact"
 [8]: docs/specifications/unfold-protocol.md "Unfold Protocol Specification"
+[9]: docs/specifications/unfold-human-skill-addendum.md "Unfold Human Skill and Experiential Knowledge Addendum"

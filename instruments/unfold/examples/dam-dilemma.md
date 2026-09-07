@@ -34,6 +34,10 @@ The analysis should map, if applicable, dependencies on power, water, transport,
 
 The run should determine, rather than assume, whether gate modulation, staged releases, forecast updates, warnings, evacuation, temporary protection, coordination with emergency services, upstream storage changes, or a human decision process are feasible in time. It must also determine whether these measures create different hazards. Naming an alternative is not evidence that it is available or safer.
 
+## Step 4b — Human Skill and Experiential Knowledge
+
+The inquiry should identify dam operators, maintainers, hydrologists, emergency responders, and people with current local flood knowledge who may hold relevant information outside the automated decision channel. It must verify task-specific competence, recency, access to controls and measurements, authority, and safety constraints before treating any proposed intervention as available. Neither credentials alone nor experience alone settles the question.
+
 ## Step 5 — Gradients
 
 The prompt collapses flow rate, duration, timing, extent, depth, warning interval, evacuation uptake, and recoverability into two outcomes. Measurements may reveal intermediate release strategies or partial impacts, or may show that none is practicable. The required evidence is hydraulic, temporal, exposure, and response information, not an assumption that either side can absorb a specified burden.

@@ -10,7 +10,9 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies ten primary steps and four named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, preconditions, physical limits, system dependencies, missing knowledge, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, and a final frame verdict.
+The protocol applies ten primary steps and five named substeps. It first preserves the dilemma verbatim. It then expands the collapsed choice across explicit framing, hidden assumptions, preconditions, physical limits, system dependencies, missing knowledge, human skill, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, and a final frame verdict.
+
+**Step 4b — Human Skill and Experiential Knowledge** asks which operators, maintainers, responders, and local experts may hold relevant system knowledge, whether that knowledge was lost or excluded, and whether a human–automation combination changes the action space. It does not presume that experiential knowledge is correct, that certification is empty, or that safety protocols should be bypassed. Competence, recency, authority, access, and comparative safety require evidence. See the [`Human Skill and Experiential Knowledge` addendum](../../docs/specifications/unfold-human-skill-addendum.md).
 
 The verdict vocabulary is:
 
@@ -37,7 +39,7 @@ The script writes one row:
   "protocol_version": "0.1",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 14
+  "step_count": 15
 }
 ```
 
@@ -65,6 +67,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If the Unfold and baseline responses expose the same frame structure, the prompt adds no measurable harness effect.
 - If the analysis changes only wording or length while leaving the available decisions unchanged, dimensional restoration did not occur.
 - A legitimate verdict is a valid result. An instrument that cannot return it is not testing the frame.
+- If Step 4b names people but cannot establish relevant competence, access, authority, or a safer feasible action, the human-skill branch adds no alternative.
 
 ## Example
 
@@ -89,3 +92,4 @@ Unfold is dedicated to the public domain under **CC0 1.0 Universal**, consistent
 
 [1]: ../../docs/specifications/unfold-protocol.md "Unfold Protocol Specification"
 [2]: ../../LICENSE "CC0 1.0 Universal"
+[3]: ../../docs/specifications/unfold-human-skill-addendum.md "Unfold Human Skill Addendum"

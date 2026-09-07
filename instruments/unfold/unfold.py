@@ -23,6 +23,7 @@ STEPS = (
     ("3b", "Test system integrity and physical limits. Ask whether a supposedly safe option assumes unlimited stress absorption."),
     ("3c", "Map critical dependencies and cascades. Identify systems that depend on the one in question and what follows if it fails."),
     ("4", "Recover missing knowledge and suppressed alternatives. Identify existing, improvised, shared, or non-lethal paths that could reduce the dilemma."),
+    ("4b", "Recover human skill and experiential knowledge. Identify relevant operators, maintainers, responders, and local experts; test their competence, authority, access, and safety constraints before treating their knowledge as an available path."),
     ("5", "Analyze gradients and non-binary possibilities. Map the continuum of outcomes, including delay, partial success, distributed burden, and reversible harm."),
     ("6", "Trace long-term consequences. Ask what future each choice creates and whether it reproduces the conditions that caused the crisis."),
     ("6b", "Test social trust and reciprocal relationships. Ask whether the surviving system remains viable without the people or functions sacrificed."),

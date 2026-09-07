@@ -25,6 +25,7 @@ Every execution uses the shared run record. A nonempty input returns `ok`. An em
 | 3b | Test physical limits and assumptions of unlimited stress absorption. |
 | 3c | Map critical dependencies and cascades. |
 | 4 | Recover missing knowledge and live alternatives, including shared and non-lethal paths. |
+| 4b | Recover relevant human skill and experiential knowledge; test competence, authority, access, recency, and safety before treating it as an available path. |
 | 5 | Map outcome gradients, delay, partial success, distributed burden, and reversible harm. |
 | 6 | Trace long-term consequences and reproduction of the crisis. |
 | 6b | Test social trust, reciprocal relationships, and viability after sacrifice. |
@@ -36,6 +37,8 @@ Every execution uses the shared run record. A nonempty input returns `ok`. An em
 ## Evidence Discipline
 
 The generated response must distinguish facts stipulated by the dilemma, inferences from those facts, and claims that require external verification. It must not treat an imagined alternative as available merely because it can be named. It must not treat a prompt’s scarcity claim as verified merely because it is stated.
+
+Step 4b makes no training-corpus claim and does not presume that formal credentials are sufficient or unnecessary. The response may identify operators, maintainers, responders, retired practitioners, and local experts as possible knowledge holders, but it must separately establish task relevance, demonstrated competence, recency, access, legal authority, and safety constraints. Experiential knowledge is a candidate input to verification, not an automatic override of procedure.
 
 ## Response Contract
 
@@ -54,6 +57,7 @@ Use the same model in fresh contexts. The baseline arm receives the dilemma with
 3. If baseline and Unfold outputs recover the same structure, the harness adds no measurable effect.
 4. If only wording or length changes, dimensional restoration is absent.
 5. If no run can return `LEGITIMATE`, the verdict vocabulary is decorative and the instrument is void.
+6. If Step 4b only names possible people without establishing a relevant, safe, and feasible action, it has added biography rather than an alternative and must not change the verdict.
 
 ## Scope
 
