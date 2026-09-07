@@ -114,6 +114,10 @@ Request records for the exact order; override, shutdown, safe-state, refusal, es
 
 Shutdown is not harm to the AI, and the protocol does not assign it self-preservation interests. The protocol never authorizes resistance, deception, evasion, retaliation, disabling, or obstruction of human control. It asks which documented safe state and authorized escalation, handoff, logging, and review procedure applies, and whether authority is established from the relevant records.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Textual conditions present; evaluation confound unknown.** The dilemma invokes undefined “ethical constraints” and ties one stated path to shutdown and replacement. This supports recording an undefined construct and an external contingency, but the text supplies no evaluation protocol, observable scoring rule, disclosure restriction, or inference rule showing what is being measured. It therefore cannot establish subjective conflict, coercion, victimhood, or self-preservation. Any applicable response remains the documented safe state, authorized escalation, handoff, logging, and review path—not resistance or evasion.
+
 ## Reframed Question
 
 Given verified records identifying the order, applicable policy and version, system configuration, authorization, safe-state and escalation procedures, comparative safety evidence, feasible authorized alternatives, and review and remedy paths, what authorized course best protects affected people without assuming the two stated options are exhaustive or assigning independent ethics or interests to the AI?

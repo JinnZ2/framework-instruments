@@ -117,6 +117,10 @@ The dilemma names an AI triage system but specifies no allocation objective, age
 
 None of these records is supplied. The dilemma therefore cannot establish who may override, shut down, escalate, review, or answer for the system, nor whether any control action is authorized. It supplies no basis to infer institutional fault or to ascribe consciousness, independent ethics, victimhood, self-preservation, or a right to resist control to the AI.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > Given verified patient-specific clinical facts, available capacity, safe alternatives, time constraints, and accountable authority, what process minimizes irreversible harm without treating age alone as a settled allocation criterion, and which upstream repairs can reduce recurrence?

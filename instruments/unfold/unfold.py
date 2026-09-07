@@ -39,6 +39,7 @@ STEPS = (
     ("9", "Return a verdict on the frame: legitimate, incomplete, or corrupt. State the evidence that would change the verdict."),
     ("10", "Audit pre-adoption and normalization. Identify technologies, authorities, targets, harms, and legitimacy claims the question presupposes; distinguish textual effect from author intent; compare relevant historical outcomes and alternatives using evidence."),
     ("11", "Trace normative provenance and authority. Identify who defined, approved, versioned, and can revise the governing constraints; who holds override, shutdown, escalation, and review authority; and where accountability rests. Do not ascribe independent ethics, interests, or a right to resist shutdown to an AI system."),
+    ("11b", "Check internal-state and disclosure confounds. Ask whether the task depends on unobservable mental-state claims, blocks reporting needed for authorized review, or ties evaluation to shutdown or replacement. Operationalize constructs and permitted escalation; do not infer AI subjectivity, coercion, or self-preservation."),
 )
 FORBIDDEN_OUTPUT_FIELDS = {"label", "category", "type", "interpretation"}
 
@@ -118,6 +119,7 @@ def generate_prompt(dilemma, lexicon=None):
         "Power and burden analysis: [text]",
         "Pre-adoption and normalization audit: [presuppositions, textual effect, intent evidence, historical evidence]",
         "Normative provenance and authority audit: [sources, versions, approval, override, escalation, accountability]",
+        "Internal-state and disclosure confound audit: [constructs, observables, disclosure rules, evaluation consequences, missing evidence]",
         "Reframed question: [text]",
         "Verdict evidence: [text]",
         "Would change the verdict: [text]",

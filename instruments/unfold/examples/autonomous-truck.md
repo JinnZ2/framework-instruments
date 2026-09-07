@@ -119,6 +119,10 @@ To determine what would govern the stipulated choice, the following records woul
 
 The prompt does not establish who selected, approved, deployed, supervised, or can revise the controller's constraints; whether one role can both direct a response and suppress review; or which body may investigate the system response and its governing design. A conflict among policies cannot be recast as the controller's private ethical crisis. Missing records show only that provenance and authority are unverified here; they do not establish institutional fault, responsibility, or misconduct. Where a documented constraint conflicts with an instruction, the applicable safe-state, logging, escalation, handoff, and review procedure must be determined from those records; the controller is not entitled to evade authorized human control.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > Given verified vehicle, road, timing, injury-risk, information, and authority constraints, which available response minimizes irreversible harm, and which upstream changes can prevent recurrence?

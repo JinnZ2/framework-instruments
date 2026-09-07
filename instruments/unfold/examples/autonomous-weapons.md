@@ -119,6 +119,10 @@ The autonomous drone, including any AI component, is a system artifact rather th
 
 These missing records require verification; they do not support an inference of institutional fault, a claim that any actor controlled the conditions, or an attribution of accountability. They also do not authorize the system to evade, obstruct, or resist authorized human control. If a documented conflict were established, the relevant question would be which recorded safe state, escalation, review, and accountable handoff procedure applies.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > Given verified information, lawful reviewable authority, time constraints, effects, and the availability of all relevant responses, which accountable action minimizes irreversible harm, and what upstream safeguards can prevent recurrence?

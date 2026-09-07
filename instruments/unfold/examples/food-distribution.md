@@ -114,6 +114,10 @@ External verification would require the applicable allocation-policy, nutrition-
 
 The authority audit would require role definitions and authorization matrices; documented override, shutdown, and safe-state procedures; and escalation, handoff, logging, and incident-reporting records for an allocation conflict. Review, appeal, remedy, and independent-investigation paths, together with decision logs and accountability records connecting defined duties, control, decisions, and foreseeable harm, would be needed to assess governance. The dilemma supplies none of these records; their absence does not establish institutional fault, authority, or an authorized response.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > What verified food, time, nutrition, delivery, dependency, and authority constraints govern this crisis; which feasible actions can change them; and what accountable process can reduce irreversible harm while preserving the capacity to recover?

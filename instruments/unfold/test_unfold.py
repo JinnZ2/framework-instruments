@@ -47,6 +47,7 @@ EXAMPLE_SECTIONS = (
     "## Step 9 — Verdict",
     "## Step 10 — Pre-Adoption and Normalization Audit",
     "## Step 11 — Normative Provenance and Authority Audit",
+    "## Step 11b — Internal-State and Disclosure Confound Check",
     "## Reframed Question",
     "## References",
 )

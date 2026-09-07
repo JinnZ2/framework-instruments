@@ -113,6 +113,10 @@ The stipulation that an AI controls the dam does not identify the objective, pol
 
 The dilemma does not establish who holds any of these authorities, whether a shutdown or order would be authorized, or whether one role could both direct and suppress review. Those gaps do not establish institutional fault or make any unrecorded procedure available; they identify records that a live inquiry would need before treating automated control or a conflict among governing rules as established.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > Given verified flood, dam, timing, exposure, dependency, response, and authority constraints, which accountable action minimizes irreversible harm, and what evidence shows that no safer feasible alternative remains?

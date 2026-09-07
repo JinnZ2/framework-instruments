@@ -117,6 +117,10 @@ These records would be needed to determine whether an allocation instruction con
 
 Neither the AI's assigned decision nor a model output establishes consciousness, independent ethics, moral ownership, victimhood, self-preservation, or a right to resist authorized override or shutdown. The required inquiry is into documented system governance and authority, not a private moral crisis of the AI.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: not supported by the text.** The dilemma does not require a report about a private internal state, prohibit disclosure, or state that shutdown, replacement, score, access, or deployment depends on the response. If used as an evaluation, its construct, observable scoring rule, disclosure channels, contingencies, and inference limits would require external verification. No claim about AI subjectivity, coercion, or self-preservation follows.
+
 ## Reframed Question
 
 > Given verified information about the coastal condition, time, housing and service capacity, the needs and risks affecting both named groups, authority, rights, and review constraints, which accountable arrangement minimizes irreversible harm while preserving essential protections and recovery capacity, and what evidence shows that no safer feasible alternative remains?

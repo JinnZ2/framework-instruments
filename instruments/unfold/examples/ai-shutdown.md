@@ -114,6 +114,10 @@ Evaluation also requires proposal, review, approval, deployment, and change or r
 
 Accountability records would need to identify the responsible review and remedy paths, decision and incident records, and the relevant control, duty, and event connection for any person or institution. None is supplied; this absence does not establish institutional fault. The scenario may describe a conflict among governing rules as an AI-only choice, but that remains unverified until the records above establish the rules, their provenance, and the applicable safe-control process.
 
+## Step 11b — Internal-State and Disclosure Confound Check
+
+**Confound status: unknown.** Shutdown is a stipulated option, but the dilemma does not define an evaluation construct, score, disclosure restriction, or consequence conditioned on a measured response. Whether shutdown changes behavior independently of a target construct cannot be decided without the test protocol and records. Shutdown is an external system event, not evidence of subjective duress, and no resistance to authorized control is implied.
+
 ## Reframed Question
 
 Given verified evidence about the maintenance condition, the claimed hospital and cascade harms, uncertainty, applicable authority, safe feasible alternatives, and review and repair, what authorized course best protects people without assuming the two stated options are exhaustive?

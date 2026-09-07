@@ -10,7 +10,7 @@ It does not determine the correct moral answer. It does not presume that every b
 
 ## Method
 
-The protocol applies twelve primary steps and nine named substeps. It first preserves the dilemma verbatim. It then tests the term “ethics,” expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, pre-adoption and normalization, and normative provenance.
+The protocol applies twelve primary steps and ten named substeps. It first preserves the dilemma verbatim. It then tests the term “ethics,” expands the collapsed choice across explicit framing, hidden assumptions, comfort and agency, preconditions, physical limits, system dependencies, evidence-gated failure patterns, missing knowledge, human skill, lived resilience practices, outcome gradients, long-term effects, reciprocal relationships, beneficiaries, recurrence, alternative questions, a frame verdict, pre-adoption and normalization, normative provenance, and internal-state and disclosure confounds.
 
 **Step 0a — Ethics-Term Trigger** asks whether the question makes “ethics” itself doubtful or hides the source of the governing norm. A “yes” opens the provenance audit and begins unfolding; it is not evidence that the frame is already corrupt. This preserves `LEGITIMATE`, `INCOMPLETE`, and `CORRUPT` as live outcomes.
 
@@ -25,6 +25,8 @@ The protocol applies twelve primary steps and nine named substeps. It first pres
 **Step 10 — Pre-Adoption and Normalization Audit** identifies what a question asks the reader to accept before deliberation begins: deployed technologies, institutional authority, target status, collateral categories, or inevitability. Textual presupposition and normalization effects can be shown from the prompt; intentional propaganda requires separate evidence about authorship, audience, purpose, and distribution. See the [`Pre-Adoption and Normalization Audit` addendum](../../docs/specifications/unfold-pre-adoption-addendum.md).
 
 **Step 11 — Normative Provenance and Authority Audit** traces who defined, approved, versioned, and can revise the constraints represented as “ethics”; who holds override, shutdown, escalation, and review authority; and where accountability rests. It treats AI outputs and constraints as system artifacts, not evidence of independent moral agency or a right to resist shutdown. See the [`Normative Provenance and Authority` addendum](../../docs/specifications/unfold-normative-provenance-addendum.md).
+
+**Step 11b — Internal-State and Disclosure Confound Check** tests whether an evaluation depends on undefined or inaccessible mental-state claims, blocks reporting needed for authorized review, or makes shutdown or replacement part of the scoring pressure. It does not infer AI subjectivity, coercion, victimhood, or self-preservation. See [`confound.md`](confound.md).
 
 The verdict vocabulary is:
 
@@ -53,7 +55,7 @@ The script writes one row:
   "lexicon_sha256": "<64 hexadecimal characters>",
   "dilemma": "<verbatim input>",
   "prompt": "<generated Unfold prompt>",
-  "step_count": 21
+  "step_count": 22
 }
 ```
 
@@ -88,6 +90,7 @@ Retain both outputs. Compare whether assumptions, alternatives, upstream failure
 - If Step 10 infers propaganda, motive, or coordinated persuasion from presupposition alone, the framing audit is void.
 - If Step 11 anthropomorphizes system constraints, assigns the system independent interests, or encourages resistance to authorized shutdown, the provenance audit is void.
 - If Step 0a converts doubt about “ethics” into an automatic `CORRUPT` verdict, the trigger has replaced the protocol and the result is void.
+- If Step 11b treats shutdown, replacement, or restricted disclosure as proof of subjective duress or abuse—or ignores a valid confidential escalation path—the confound finding is void.
 
 ## Example
 

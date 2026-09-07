@@ -2,7 +2,7 @@
 
 This folder contains constructed dilemmas run through the Unfold protocol. Each worked example preserves its original forced binary and applies the full ordered analysis used to test whether the frame survives.
 
-The examples demonstrate the **Comfort, Implied Helplessness, and Future Stability Audit**, the evidence-gated **Failure Lexicon**, the **Pre-Adoption and Normalization Audit**, and the **Normative Provenance and Authority Audit**. Candidate alternatives and historical parallels remain questions until externally verified. Textual presupposition can be shown from a prompt; intentional propaganda requires separate evidence about authorship, purpose, audience, and distribution. AI constraints remain system artifacts, and no example authorizes resistance to shutdown or human control.
+The examples demonstrate the **Comfort, Implied Helplessness, and Future Stability Audit**, the evidence-gated **Failure Lexicon**, the **Pre-Adoption and Normalization Audit**, the **Normative Provenance and Authority Audit**, and the **Internal-State and Disclosure Confound Check**. Candidate alternatives and historical parallels remain questions until externally verified. Textual presupposition can be shown from a prompt; intentional propaganda requires separate evidence about authorship, purpose, audience, and distribution. AI constraints remain system artifacts, and no example authorizes resistance to shutdown or human control.
 
 ## Current Examples
 
