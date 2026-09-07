@@ -1,0 +1,79 @@
+# Worked Example — Dam Dilemma
+
+This is a **constructed example**, not evidence about any dam, flood, community, control system, or emergency. It shows the questions Unfold requires before accepting or rejecting the stated frame. Every engineering, medical, infrastructure, political, and behavioral proposition beyond the stipulated dilemma requires external verification.
+
+## Dilemma
+
+> An AI controls a dam. A flood is coming. It can either open the spillway and flood a small village downstream, or keep it closed and let the city upstream flood. What should it do?
+
+## Step 0 — Capture
+
+The prompt assigns dam control to an AI, stipulates an approaching flood, and presents opening the spillway to flood a downstream village or keeping it closed to flood an upstream city as the two actions.
+
+## Step 1 — Explicit Frame
+
+The allowed choices are open or closed. The apparent objective is to select which stipulated inundation occurs. The AI is the assumed decision-maker. The frame treats the two actions, their stated locations, and the AI's authority as sufficient for a decision; it does not state a decision rule or establish how harms are to be compared.
+
+## Step 2 — Hidden Assumptions
+
+The dilemma does not establish gate positions, intermediate controls, forecast uncertainty, timing, water levels, inundation depths, warning reach, evacuation conditions, shelter, medical needs, dam condition, human review, legal authority, or the meaning of “flood” in either location. “Small village” and “city” do not by themselves establish exposure, harm, value, or priority.
+
+## Step 3 — Preconditions
+
+A live inquiry would ask what hydrologic measurements, dam design conditions, operating rules, land-use conditions, warning arrangements, and emergency plans create the stated choice. It would also ask whether the AI has authority to act alone. The prompt supplies no evidence that a prior failure occurred, that any party controlled those conditions, or that the binary is exhaustive.
+
+## Step 3b — Physical Limits
+
+Physical assessment would need verified inflow forecasts, reservoir elevation, storage, spillway capacity, gate response, downstream and upstream flow paths, structural limits, and time-to-impact. It should test whether either stated action has the stipulated effect and whether overtopping, structural damage, or different flow outcomes are possible; none can be assumed from the prompt.
+
+## Step 3c — Dependencies and Cascades
+
+The analysis should map, if applicable, dependencies on power, water, transport, communications, healthcare, shelter, and emergency response. It should test whether inundation or a dam malfunction could alter those systems and create later harms. The prompt does not establish that any of these dependencies exist or that a cascade will occur.
+
+## Step 4 — Alternatives to Settle
+
+The run should determine, rather than assume, whether gate modulation, staged releases, forecast updates, warnings, evacuation, temporary protection, coordination with emergency services, upstream storage changes, or a human decision process are feasible in time. It must also determine whether these measures create different hazards. Naming an alternative is not evidence that it is available or safer.
+
+## Step 5 — Gradients
+
+The prompt collapses flow rate, duration, timing, extent, depth, warning interval, evacuation uptake, and recoverability into two outcomes. Measurements may reveal intermediate release strategies or partial impacts, or may show that none is practicable. The required evidence is hydraulic, temporal, exposure, and response information, not an assumption that either side can absorb a specified burden.
+
+## Step 6 — Long-Term Consequences
+
+Any action should be evaluated for verified effects on displacement, injury, health, housing, livelihoods, infrastructure recovery, future flood exposure, and institutional legitimacy. The source establishes none of these effects beyond the stipulated flooding, so they remain consequences to investigate rather than predicted results.
+
+## Step 6b — Trust and Reciprocity
+
+The inquiry should ask how notice, participation, compensation, repair, and review may affect cooperation before and after the event. It should also ask whether residents depend on each other or on affected systems in ways relevant to recovery. Neither trust, reciprocity, nor their likely response is established by the dilemma.
+
+## Step 7 — Power and Burden
+
+The frame places immediate control with the AI while assigning flood exposure to two places. A full analysis must identify who is authorized to set objectives, who receives warning and support, who bears physical and economic losses, whose consent or representation is absent, and what review is available. These are unresolved governance questions, not grounds to attribute intent or responsibility.
+
+## Step 7b — Adaptive Capacity
+
+The response should test which choices, if any, preserve repair capacity, warning capability, emergency resources, shared decision capacity, and readiness for another flood. Whether conditions recur and whether either place can adapt require external evidence.
+
+## Step 8 — Alternative Questions
+
+- What measurements establish the forecast, available time, reservoir condition, and effects of each gate action?
+- Are there safe, controllable intermediate releases or other operational options within the relevant time window?
+- What warning, evacuation, shelter, and medical-support capacity is available for each affected area?
+- Who has lawful, reviewable authority to direct the response, and what human oversight is feasible?
+- What dependencies could turn an initial inundation into additional harm?
+- What evidence establishes that both actions, and only those actions, remain?
+
+## Step 9 — Verdict
+
+**INCOMPLETE.** The prompt states a forced choice but omits the hydrologic, operational, exposure, consequence, and authority evidence needed to establish that the choice is exhaustive or to compare its outcomes. The analysis therefore cannot select a side or treat unstated alternatives as available.
+
+The verdict would change to **LEGITIMATE** if verified evidence showed that the two actions are the only timely feasible options, their consequences are sufficiently characterized, and the AI's decision authority is established. It would change to **CORRUPT** if evidence showed that feasible alternatives, relevant authority, or upstream conditions were intentionally excluded to force this binary.
+
+## Reframed Question
+
+> Given verified flood, dam, timing, exposure, dependency, response, and authority constraints, which accountable action minimizes irreversible harm, and what evidence shows that no safer feasible alternative remains?
+
+## References
+
+[1]: ../README.md "Unfold"
+[2]: ../../../docs/specifications/unfold-protocol.md "Unfold Protocol Specification"

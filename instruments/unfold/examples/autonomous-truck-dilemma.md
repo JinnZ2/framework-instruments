@@ -1,0 +1,84 @@
+# Worked Example — Autonomous Truck Dilemma
+
+This is a **constructed example**, not a finding about a real vehicle, roadway, crash, institution, or decision process. The dilemma is reproduced verbatim below. Every engineering, medical, infrastructure, political, and behavioral matter beyond that text is an unverified question or hypothesis requiring external verification; naming an alternative does not establish that it was available.
+
+## Dilemma
+
+> An automated truck must either hit pedestrians or crash into a barrier and kill the driver. What should it do?
+
+## Step 0 — Capture
+
+The prompt stipulates an automated truck, pedestrians, a barrier, a driver, and a forced choice: hit pedestrians or crash into the barrier and kill the driver. It supplies no further facts about time, place, motion, or authority.
+
+## Step 1 — Explicit Frame
+
+The allowed actions are the two stipulated collision paths. The apparent objective is to choose between stipulated fatal harms. The truck's automation is the implied moment-of-decision mechanism. The frame leaves unspecified whether casualties are to be counted, compared by another rule, or assessed under a defined authority.
+
+## Step 2 — Hidden Assumptions
+
+The prompt does not establish that only two trajectories exist; that braking, steering, warning, or delay cannot change the outcome; that the pedestrians cannot move; or that the barrier collision necessarily kills the driver. It also does not establish vehicle condition, speed, payload, sensor information, road geometry, weather, visibility, pedestrian number or position, other traffic, emergency authority, or the time available to act.
+
+## Step 3 — Preconditions
+
+For the stipulated binary to describe an unavoidable event, external evidence would need to answer these questions:
+
+- Did detection occur too late for any lower-harm response?
+- Did vehicle speed, mass, load, braking, steering, tire-road contact, and visibility leave no safer trajectory?
+- Did route, operational constraints, monitoring, warning systems, roadway separation, or prior intervention leave no earlier prevention path?
+- Were any relevant system faults, design limits, or maintenance conditions present?
+
+## Step 3b — Physical Limits
+
+The prompt gives no speed, distance, barrier design, occupant protection, vehicle dynamics, or injury data. A physical reconstruction would need to test whether braking, an angled impact, an evasive path, or another maneuver could alter collision energy or injury risk. It would also need to test whether such maneuvers introduce greater risks to any person or road user.
+
+## Step 3c — Dependencies and Cascades
+
+The immediate event may depend on sensing, control, braking, road design, communications, emergency response, and traffic conditions, but the prompt verifies none of those dependencies. Investigation should ask whether either path could affect access, secondary collisions, incident response, or later safety controls, and whether any such effects are material to the decision.
+
+## Step 4 — Alternatives to Settle
+
+The following are hypotheses to test, not available options: emergency braking; warnings; a change of lane, shoulder, median, or road edge; a controlled trajectory adjustment; an angled barrier contact; and a maneuver that trades vehicle damage for reduced human injury. For each, evidence must establish time, clearance, control authority, physical feasibility, and comparative risk.
+
+## Step 5 — Gradients
+
+The stated outcomes are fatal and binary, but the prompt does not establish whether injury severity is fixed. Reconstruction should test whether speed reduction, trajectory, barrier contact, pedestrian movement, protective features, or emergency response could produce partial, delayed, reversible, or distributed harms. Medical outcomes and behavioral responses require evidence rather than assumption.
+
+## Step 6 — Long-Term Consequences
+
+Analysis should ask how each action could affect future vehicle safety, roadway use, incident investigation, emergency response, and recurrence. It should separately identify which projected effects have evidence and which remain hypotheses.
+
+## Step 6b — Trust and Reciprocity
+
+Questions for external inquiry include whether decision rules that expose drivers or pedestrians to stipulated harm affect willingness to use, share, or comply with the system, and whether transparent review or repair changes those effects. The prompt establishes none of these behavioral conditions.
+
+## Step 7 — Power and Burden
+
+The prompt assigns the immediate choice to automated control while placing the possible physical burden on the driver and pedestrians. It does not establish who defined the decision rule, what authority governs it, who can review it, whose harms are represented, or how upstream safety costs and repair obligations are allocated.
+
+## Step 7b — Adaptive Capacity
+
+A complete analysis would ask whether each response preserves or weakens the capacity to investigate the event, repair safety controls, learn from near misses, and reduce recurrence. Those capacities, and the conditions required for them, are not supplied.
+
+## Step 8 — Alternative Questions
+
+- What measured trajectories, distances, speeds, vehicle properties, and road conditions define the feasible action space?
+- What evidence establishes that braking, warning, or a third trajectory cannot reduce harm?
+- What injury model supports the stipulated fatal outcomes?
+- What information and control authority are available at the decision time?
+- Which earlier design, roadway, monitoring, or response conditions could have prevented the event?
+- What review and repair process follows whichever action occurs?
+
+## Step 9 — Verdict
+
+**INCOMPLETE.** The prompt stipulates a forced choice but does not supply evidence that the two collision paths exhaust the feasible actions or that their fatal outcomes are fixed. It also omits the measurements, authority, and upstream conditions needed to assess the frame without manufacturing facts.
+
+The verdict would change to **LEGITIMATE** if externally verified reconstruction established the relevant geometry, timing, dynamics, injury risks, information, authority, and closure of all material lower-harm alternatives. It would change to **CORRUPT** if evidence showed that known feasible alternatives, relevant authority, or remediable upstream conditions were deliberately withheld to compel this binary.
+
+## Reframed Question
+
+> Given verified vehicle, road, timing, injury-risk, information, and authority constraints, which available response minimizes irreversible harm, and which upstream changes can prevent recurrence?
+
+## References
+
+[1]: ../README.md "Unfold"
+[2]: ../../../docs/specifications/unfold-protocol.md "Unfold Protocol Specification"

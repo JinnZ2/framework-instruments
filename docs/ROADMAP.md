@@ -1,6 +1,6 @@
 # Conformance Roadmap
 
-Four prototype code families, one Markdown reproduction protocol, seven source
+Five prototype code families, one Markdown reproduction protocol, eight source
 specifications, one source marker, and the defect arena. Passing tests
 establish the behaviour currently encoded; `docs/AUDIT_2026-09-06.md` records
 what the specifications said and the build did not, and what changed.
@@ -25,6 +25,7 @@ what the specifications said and the build did not, and what changed.
 | P2 | Model deprecation backcast | Seven-column schema and guardrail-clock layer, no inferred cells. |
 | P2 | B1 rejoin reading | The shifted-rejoin alternative built beside the aligned one, both reported. |
 | P2 | Arena | A claim per test with a stated intended branch, so `path_probe` covers the suite rather than a sample. |
+| P2 | Unfold | Offline scorer for retained baseline/Unfold response pairs, including unavoidable no-win controls. |
 
 ## Release threshold
 

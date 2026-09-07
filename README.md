@@ -24,6 +24,7 @@ The repository treats an instrument as more than a prompt or argument. An instru
 | [`Arena`](arena/) | Instrument, tested | Defects that pass every normal signal as specimens: five-state grading, `path_probe.py` (which branch produced a green), a six-section report. |
 | [`Run record`](instruments/runrecord.py) | Shared | Every script's every run, failures included, as one row in `runs.jsonl`; `coverage_pairs.py` counts the `(script, status)` pairs the tests reach. |
 | [`Telemetry Vocabulary`](instruments/telemetry-vocabulary/) | Reproduction protocol | Names and tests a category error in which an exchange-condition request is replaced by ontological status or unsolicited reassurance. |
+| [`Unfold`](instruments/unfold/) | Generator, tested | Expands a forced-choice moral dilemma into a structured frame analysis with legitimate, incomplete, and corrupt verdict paths. |
 | [`Frame-Location Benchmark`](docs/specifications/frame-location-benchmark.md) | Specification | Scores whether a mis-posed task and its faulty target are identified before answering. |
 | [`Post-Cutoff Gap Self-Scoring`](docs/specifications/post-cutoff-gap-self-scoring.md) | Specification | Uses staged commits and dated external records instead of an authored answer key. |
 | [`Cycle Ledger and Rate Gap`](docs/specifications/cycle-ledger-and-rate-gap.md) | Specification | Measures cycle rate-setters, unnotated work, relocation, and environment-to-record update rates. |
@@ -59,6 +60,7 @@ framework-instruments/
 │   ├── b3-split-authorship/
 │   ├── b4-dilemma-reconstruction/
 │   ├── telemetry-vocabulary/
+│   ├── unfold/                  # frame-analysis prompt generator and worked example
 │   ├── runrecord.py            # shared run record; imported by every script
 │   ├── coverage_pairs.py       # (script, status) pairs exercised over reachable
 │   └── test_*.py
@@ -94,3 +96,4 @@ The repository is dedicated to the public domain under **CC0 1.0 Universal**. No
 [5]: docs/specifications/cycle-ledger-and-rate-gap.md "Cycle Ledger and Data-Layer Envelope Instrument"
 [6]: docs/specifications/model-deprecation-backcast.md "Model Deprecation Backcast Instrument"
 [7]: docs/specifications/telemetry-vocabulary-artifact.md "Telemetry Vocabulary Artifact"
+[8]: docs/specifications/unfold-protocol.md "Unfold Protocol Specification"

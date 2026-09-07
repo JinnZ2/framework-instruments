@@ -23,6 +23,7 @@ detail lives in each instrument's `README.md`, the specifications under
 | `instruments/b2-audit-isolation/` | Key-as-artifact under conditions A/B/C/D; commit/release lock as a process boundary; agreement across auditors, never correctness. |
 | `instruments/b3-split-authorship/` | Case role and key role that never share context, enforced by file boundary; joins into B2's case schema with drops counted; arms never mixed. |
 | `instruments/b4-dilemma-reconstruction/` | Requirement-set reconstruction, agreement, shuffle null, calibration. Delivered logic; only its entry points were wired to the run record. |
+| `instruments/unfold/` | Deterministic frame-analysis prompt generator. Preserves the dilemma verbatim and emits legitimate, incomplete, and corrupt verdict paths; model execution remains outside the repository. |
 | `instruments/coverage_pairs.py` | Coverage as counted `(script, status)` pairs exercised over reachable. Run it; do not store its numbers here. |
 | `instruments/test_status_paths.py` | Every script's `empty` and `error` paths through the run record. |
 | `arena/` | Specimens of defects that pass every normal signal; `path_probe.py` disables one claimed branch and re-runs the claiming test; `report.py` puts the false-green count before any aggregate. |
