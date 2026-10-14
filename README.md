@@ -1,3 +1,6 @@
+> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+> Mismatches, dead ends and odd names in this repo are kept on purpose.
+
 # Framework Instruments
 
 Framework Instruments is a **CC0 collection of small, falsifiable measurement tools** for questions that are usually left implicit: whether a problem is well posed, whether an alternative branch remains separated, whether an answer key is coherent, where work relocates, and what evidence would reverse a reading.
